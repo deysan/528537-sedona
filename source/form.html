@@ -12,8 +12,8 @@
         <button class="main-nav__toggle">Открыть меню</button>
         <ul class="main-nav__list">
           <li class="main-nav__item main-nav__item--logo">
-            <a class="main-nav__link" href="index.html">
-              <img class="page-logo" src="http://placehold.it/102x83">
+            <a class="main-nav__link main-nav__link--logo" href="index.html">
+              <img class="page-logo" src="img/logo-sedona-mobile.svg">
             </a>
           </li>
           <li class="main-nav__item">
@@ -31,7 +31,8 @@
         </ul>
       </nav>
       <div class="page-header__intro page-header__intro--inner">
-        <img src="http://placehold.it/320x160">
+        <img class="page-header__text" src="img/text-sedona.svg" width="229" height="39">
+        <img class="page-header__triangle" src="img/bg-intro-triangle-mobile.svg" width="320" height="26">
       </div>
     </header>
 
@@ -45,25 +46,28 @@
       <form class="feedback" method="get" action="https://echo.htmlacademy.ru">
 
         <fieldset class="feedback__fieldset">
-          <legend class="feedback__legend">Представьтесь:</legend>
-          <label class="feedback__label" for="first-name">Имя*:</label>
-          <input class="feedback__input" id="first-name" type="text" name="first-name" placeholder="Петр" required>
-          <label class="feedback__label" for="second-name">Фамилия*:</label>
-          <input class="feedback__input" id="second-name" type="text" name="second-name" placeholder="Иванов" required>
-          <label class="feedback__label" for="third-name">Отчество:</label>
-          <input class="feedback__input" id="third-name" type="text" name="third-name" placeholder="Александрович">
+          <h2 class="feedback__legend">Представьтесь:</h2>
+          <label class="feedback__label" for="first-name">Имя*:
+            <input class="feedback__input" id="first-name" type="text" name="first-name" placeholder="Петр" required>
+          </label>
+          <label class="feedback__label" for="second-name">Фамилия*:
+            <input class="feedback__input" id="second-name" type="text" name="second-name" placeholder="Иванов" required>
+          </label>
+          <label class="feedback__label" for="third-name">Отчество:
+            <input class="feedback__input" id="third-name" type="text" name="third-name" placeholder="Александрович">
+          </label>
         </fieldset>
 
         <fieldset class="feedback__fieldset">
-          <legend class="feedback__legend">Контактная информация:</legend>
+          <h2 class="feedback__legend">Контактная информация:</h2>
           <label class="feedback__label" for="tel">Контактный телефон*:</label>
           <input class="feedback__input" id="tel" type="tel" name="tel" pattern="[+]{1}[0-9]{8}" placeholder="Введите телефон" required>
-          <label class="feedback__label" for="email">Электронная почта*:</label>
-          <input class="feedback__input" id="email" type="email" name="email" placeholder="Введите e-mail" required>
+          <label class="feedback__label" for="mail">Электронная почта*:</label>
+          <input class="feedback__input" id="mail" type="mail" name="mail" placeholder="Введите e-mail" required>
         </fieldset>
 
         <fieldset class="feedback__fieldset">
-          <legend class="feedback__legend">Ваше общее впечатление:</legend>
+          <h2 class="feedback__legend">Ваше общее впечатление:</h2>
           <input class="feedback__input-radio" id="good" type="radio" name="impression" value="good" checked>
           <label class="feedback__label-radio" for="good">Скорее положительное</label>
           <input class="feedback__input-radio" id="bad" type="radio" name="impression" value="bad">
@@ -73,7 +77,7 @@
         </fieldset>
 
         <fieldset class="feedback__fieldset">
-          <legend class="feedback__legend">Посещенные достопримечательности:</legend>
+          <h2 class="feedback__legend">Посещенные достопримечательности:</h2>
           <input class="feedback__input-check" id="bridge"type="checkbox" name="sight" value="bridge" checked>
           <label class="feedback__label-check" for="bridge">Мост Дьявола</label>
           <input class="feedback__input-check" id="mountain" type="checkbox" name="sight" value="mountain" checked>
@@ -85,11 +89,13 @@
         </fieldset>
 
         <fieldset class="feedback__fieldset">
-          <legend class="feedback__legend">Опишите свои эмоции:</legend>
+          <h2 class="feedback__legend">Опишите свои эмоции:</h2>
           <textarea class="feedback__textarea" name="comment" placeholder="Опишите подробно все свои восторги"></textarea>
         </fieldset>
 
-        <button class="feedback__btn btn" type="submit">Отправить отзыв</button>
+        <div class="feedback__btn">
+          <button class="btn" type="submit">Отправить отзыв</button>
+        </div>
 
       </form>
 
