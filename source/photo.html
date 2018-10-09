@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Фото и видео | HTML Academy: Седона</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
 
@@ -11,8 +12,8 @@
         <button class="main-nav__toggle">Открыть меню</button>
         <ul class="main-nav__list">
           <li class="main-nav__item main-nav__item--logo">
-            <a class="main-nav__link" href="index.html">
-              <img class="page-logo" src="http://placehold.it/102x83">
+            <a class="main-nav__link main-nav__link--logo" href="index.html">
+              <img class="page-logo" src="img/logo-sedona-mobile.svg">
             </a>
           </li>
           <li class="main-nav__item">
@@ -30,7 +31,8 @@
         </ul>
       </nav>
       <div class="page-header__intro page-header__intro--inner">
-        <img src="http://placehold.it/320x160">
+        <img class="page-header__text" src="img/text-sedona.svg" width="229" height="39">
+        <img class="page-header__triangle" src="img/bg-intro-triangle-mobile.svg" width="320" height="26">
       </div>
     </header>
 
@@ -45,7 +47,7 @@
         <h2 class="section__title visually-hidden">Фотографии</h2>
         <ul class="photo__list">
           <li class="photo__item">
-            <img class="photo__image" src="http://placehold.it/280x280" alt="Неродные просторы">
+            <img class="photo__image" src="img/photo-sunset-mobile@1x.jpg" alt="Неродные просторы" width="280" height="280">
             <div class="photo__info">
               <h3 class="photo__title">Неродные просторы</h3>
               <p class="photo__autor">Автор фото: Борис</p>
@@ -53,7 +55,7 @@
             </div>
           </li>
           <li class="photo__item">
-            <img class="photo__image" src="http://placehold.it/280x280" alt="Местная растительность">
+            <img class="photo__image" src="img/photo-cactus-mobile@1x.jpg" alt="Местная растительность" width="280" height="280">
             <div class="photo__info">
               <h3 class="photo__title">Местная растительность</h3>
               <p class="photo__autor">Автор фото: Сергей</p>
@@ -61,7 +63,7 @@
             </div>
           </li>
           <li class="photo__item">
-            <img class="photo__image" src="http://placehold.it/280x280" alt="Дорога на Север">
+            <img class="photo__image" src="img/photo-roads-mobile@1x.jpg" alt="Дорога на Север" width="280" height="280">
             <div class="photo__info">
               <h3 class="photo__title">Дорога на Север</h3>
               <p class="photo__autor">Автор фото: Петр</p>
@@ -69,7 +71,7 @@
             </div>
           </li>
           <li class="photo__item">
-            <img class="photo__image" src="http://placehold.it/280x280" alt="Мост Дьявола">
+            <img class="photo__image" src="img/photo-bridge-mobile@1x.jpg" alt="Мост Дьявола" width="280" height="280">
             <div class="photo__info">
               <h3 class="photo__title">Мост Дьявола</h3>
               <p class="photo__autor">Автор фото: Антон</p>
@@ -82,9 +84,12 @@
 
       <section class="section video">
         <h2 class="section__title visually-hidden">Видео</h2>
-        <h3 class="section__subtitle">Все еще сомневаетесь?</h3>
+        <h3 class="section__title">Все еще сомневаетесь?</h3>
         <p class="section__text">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
-        <video></video>
+        <div class="video__info">
+          <img class="video__preview" src="img/video-mobile@1x.jpg" alt="Видеопрезентацию Седоны">
+          <div class="video__player"></div>
+        </div>
       </section>
 
     </main>
