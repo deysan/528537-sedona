@@ -1,9 +1,7 @@
 .advantages__list {
   display: flex;
   flex-direction: column;
-  margin: 0;
-  padding: 0;
-  list-style: none;
+  .list-reset();
   background-color: @color-bg;
 
   &--more {
@@ -63,9 +61,7 @@
   margin-top: 15px;
   margin-bottom: 10px;
   padding: 0;
-  font-size: 18px;
-  line-height: 26px;
-  font-weight: bold;
+  .font-set(18px, 26px, bold);
 }
 
 .advantages__text {

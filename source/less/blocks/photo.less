@@ -3,9 +3,7 @@
 }
 
 .photo__list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
+  .list-reset();
 }
 
 .photo__item {
@@ -34,14 +32,12 @@
 
 .photo__title {
   margin: 0;
-  font-size: 14px;
-  line-height: 24px;
+  .font(14px, 24px);
 }
 
 .photo__autor {
   margin: 0;
-  font-size: 14px;
-  line-height: 24px;
+  .font(14px, 24px);
   text-transform: none;
   color: @dark;
 }

@@ -1,9 +1,15 @@
-.font (@font-size, @line-height) {
+.font(@font-size, @line-height) {
   font-size: @font-size;
   line-height: @line-height;
 }
 
-.list-reset () {
+.font-set(@font-size, @line-height, @font-weight) {
+  font-size: @font-size;
+  line-height: @line-height;
+  font-weight: @font-weight;
+}
+
+.list-reset() {
   margin: 0;
   padding: 0;
   list-style: none;

@@ -7,9 +7,7 @@
   display: flex;
   flex-direction: column;
   word-wrap: break-word;
-  margin: 0;
-  padding: 0;
-  list-style: none;
+  .list-reset();
 }
 
 .main-nav__item {
@@ -37,9 +35,7 @@
   display: block;
   padding-top: 17px;
   padding-bottom: 19px;
-  font-size: 18px;
-  line-height: 18px;
-  font-weight: bold;
+  .font-set(18px, 18px, bold);
   color: @white;
   text-align: center;
   text-decoration: none;
