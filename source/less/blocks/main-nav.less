@@ -1,6 +1,39 @@
+.main-nav {
+  position: relative;
+}
+
 .main-nav__toggle {
   position: absolute;
-  display: none;
+  top: 0;
+  right: 0;
+  width: 61px;
+  height: 56px;
+  padding: 0;
+  z-index: 2;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  outline: none;
+
+  &--opened::before,
+  &--opened::after {
+    content: "";
+    position: absolute;
+    top: 26px;
+    right: 18px;
+    width: 28px;
+    height: 4px;
+    background-color: @white;
+  }
+
+  &--opened::before {
+    transform: rotate(45deg);
+    box-shadow: none;
+  }
+
+  &--opened::after {
+    transform: rotate(-45deg);
+  }
 }
 
 .main-nav__list {
