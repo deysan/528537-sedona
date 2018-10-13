@@ -21,3 +21,30 @@
   .font(14px, 24px);
   color: @dark;
 }
+
+@media (min-width: @tablet) {
+  .section__title {
+    margin: 18px 0 28px;
+    padding: 0;
+    .font-set(21px, 26px, bold);
+  }
+  .section__subtitle {
+    margin-bottom: 20px;
+    .font-set(30px, 26px, bold);
+  }
+}
+
+// @media (min-width: @desktop) {
+//   .section__title {
+//     margin: 18px 0 28px;
+//     .font-set(21px, 26px, bold);
+//   }
+//   .section__subtitle {
+//     margin-bottom: 20px;
+//     .font-set(30px, 26px, bold);
+//   }
+
+//   .section__text {
+//     .font(14px, 24px);
+//   }
+// }

@@ -30,6 +30,13 @@
     background-color: @color-base;
   }
 
+  &--small {
+    .advantages__info {
+      padding-left: 35px;
+      padding-right: 35px;
+    }
+  }
+
   &--more {
     .container();
     padding-top: 22px;
@@ -71,7 +78,7 @@
 }
 
 .advantages__title {
-  margin: 0;
+  margin: 0 auto;
   margin-top: 15px;
   margin-bottom: 11px;
   padding: 0;
@@ -99,5 +106,130 @@
 
   &--bridge {
     background-image: url("../../img/main-bridge-mobile@1x.jpg");
+  }
+}
+
+@media (min-width: @tablet) {
+  .advantages {
+    padding-top: 35px;
+    padding-bottom: 15px;
+  }
+
+  .advantages__list {
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    &--more {
+      flex-direction: row;
+      justify-content: space-between;
+      flex-wrap: nowrap;
+
+      .advantages__item {
+        flex-direction: column;
+        flex-basis: 170px;
+      }
+    }
+  }
+
+  .advantages__item {
+    display: flex;
+    flex-direction: row;
+
+    &--big {
+      width: 100%;
+      min-height: 256px;
+      margin: 0;
+      padding-top: 0;
+
+      .advantages__info {
+        width: 33%;
+        padding: 30px 45px 32px;
+      }
+    }
+
+    &--small {
+      padding-top: 30px;
+      padding-bottom: 35px;
+      flex-basis: 33%;
+
+      .advantages__info {
+        padding-left: 40px;
+        padding-right: 40px;
+      }
+    }
+
+    &--more {
+      padding-top: 145px;
+      padding-bottom: 45px;
+      text-align: center;
+    }
+
+    &--1 {
+      background-image: none;
+    }
+
+    &--2 {
+      .advantages__info {
+        order: 2;
+      }
+    }
+
+    &--gift {
+      order: 2;
+    }
+
+    .advantages__info {
+      // width: 33%;
+    }
+
+    .advantages__title {
+      max-width: 150px;
+      .font-set(21px, 26px, bold);
+      // margin: 0 auto;
+    }
+
+    .advantages__photo {
+      // width: auto;
+      height: auto;
+      margin-top: 0;
+
+      &--city {
+        background-image: url("../../img/main-city-tablet@1x.jpg");
+      }
+
+      &--bridge {
+        background-image: url("../../img/main-bridge-tablet@1x.jpg");
+      }
+    }
+  }
+}
+
+@media (min-width: @desktop) {
+  .advantages__list {
+    &--more {
+      .advantages__item {
+        flex-basis: 300px;
+      }
+    }
+  }
+
+  .advantages__item {
+    &--small {
+      padding-bottom: 60px;
+    }
+    &--more {
+      padding-bottom: 65px;
+    }
+  }
+
+  .advantages__photo {
+
+    &--city {
+      background-image: url("../../img/main-city-desktop@1x.jpg");
+    }
+
+    &--bridge {
+      background-image: url("../../img/main-bridge-desktop@1x.jpg");
+    }
   }
 }
