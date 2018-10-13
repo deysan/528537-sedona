@@ -9,14 +9,15 @@ body {
   display: flex;
   flex-direction: column;
   min-width: 260px;
-  min-height: 100vh;
+  height: auto;
   margin: 0;
   word-wrap: break-word;
   font-family: @font-primary;
   .font(@font-size, @line-height);
   text-transform: uppercase;
   color: @black;
-  background-color: @white;
+  background-color: @color-bg;
+  box-shadow: 0 5px 15px 0 fade(@black, 20%);
 }
 
 img {
