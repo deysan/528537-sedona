@@ -1,14 +1,12 @@
 .socials {
-  margin: 20px 0;
+  margin: 33px 0;
 }
 
 .socials__list {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  margin: 0;
-  padding: 0;
-  list-style: none;
+  .list-reset();
 }
 
 .socials__item {
@@ -29,13 +27,26 @@
 }
 
 .socials__link--tw {
-  background-image: url("../../img/icon-twitter.svg");
+  background-image: url("../img/icon-twitter.svg");
 }
 
 .socials__link--fb {
-  background-image: url("../../img/icon-facebook.svg");
+  background-image: url("../img/icon-facebook.svg");
 }
 
 .socials__link--yt {
-  background-image: url("../../img/icon-youtube.svg");
+  background-image: url("../img/icon-youtube.svg");
+}
+
+@media (min-width: @tablet) {
+  .socials,
+  .socials__item {
+    margin: 0;
+  }
+}
+
+@media (min-width: @desktop) {
+  .socials {
+    margin: 10px 0;
+  }
 }

@@ -2,6 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Форма отзыва | HTML Academy: Седона</title>
     <link rel="stylesheet" href="css/style.css">
   </head>
@@ -9,92 +10,102 @@
 
     <header class="page-header">
       <nav class="main-nav">
-        <button class="main-nav__toggle">Открыть меню</button>
+        <button class="main-nav__toggle  main-nav__toggle--opened"><span class="visually-hidden">Открыть меню</span></button>
         <ul class="main-nav__list">
           <li class="main-nav__item main-nav__item--logo">
             <a class="main-nav__link main-nav__link--logo" href="index.html">
               <img class="page-logo" src="img/logo-sedona-mobile.svg">
             </a>
           </li>
-          <li class="main-nav__item">
+          <li class="main-nav__item main-nav__item--left">
             <a class="main-nav__link" href="index.html">Главная</a>
           </li>
-          <li class="main-nav__item">
+          <li class="main-nav__item main-nav__item--left">
             <a class="main-nav__link" href="photo.html">Фото и видео</a>
           </li>
-          <li class="main-nav__item">
+          <li class="main-nav__item main-nav__item--right">
             <a class="main-nav__link main-nav__link--active" href="form.html">Форма отзыва</a>
           </li>
-          <li class="main-nav__item">
+          <li class="main-nav__item main-nav__item--right">
             <a class="main-nav__link" href="https://htmlacademy.ru" target="_blank">HTML Academy</a>
           </li>
         </ul>
       </nav>
       <div class="page-header__intro page-header__intro--inner">
         <img class="page-header__text" src="img/text-sedona.svg" width="229" height="39">
-        <img class="page-header__triangle" src="img/bg-intro-triangle-mobile.svg" width="320" height="26">
       </div>
     </header>
 
     <main class="page-main">
 
       <section class="section page-main__info">
-        <h1 class="section__title">Оставьте свой отзыв</h1>
-        <p class="section__text">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
+        <h1 class="section__title section__title--inner">Оставьте свой отзыв</h1>
+        <p class="section__text">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а&nbsp;также&nbsp;о посещенных вами достопримечательностях</p>
       </section>
 
       <form class="feedback" method="get" action="https://echo.htmlacademy.ru">
 
-        <fieldset class="feedback__fieldset">
-          <h2 class="feedback__legend">Представьтесь:</h2>
-          <label class="feedback__label" for="first-name">Имя*:
-            <input class="feedback__input" id="first-name" type="text" name="first-name" placeholder="Петр" required>
-          </label>
-          <label class="feedback__label" for="second-name">Фамилия*:
-            <input class="feedback__input" id="second-name" type="text" name="second-name" placeholder="Иванов" required>
-          </label>
-          <label class="feedback__label" for="third-name">Отчество:
-            <input class="feedback__input" id="third-name" type="text" name="third-name" placeholder="Александрович">
-          </label>
+        <fieldset class="feedback__fieldset feedback__fieldset--fullname">
+          <h2 class="feedback__legend feedback__legend--fullname">Представьтесь:</h2>
+          <div class="feedback__group feedback__group--fullname">
+            <label class="feedback__label" for="first-name">Имя*:
+              <input class="feedback__input" id="first-name" type="text" name="first-name" placeholder="Петр" required>
+            </label>
+            <label class="feedback__label" for="second-name">Фамилия*:
+              <input class="feedback__input" id="second-name" type="text" name="second-name" placeholder="Иванов" required>
+            </label>
+            <label class="feedback__label" for="third-name">Отчество:
+              <input class="feedback__input" id="third-name" type="text" name="third-name" placeholder="Александрович">
+            </label>
+          </div>
         </fieldset>
 
-        <fieldset class="feedback__fieldset">
-          <h2 class="feedback__legend">Контактная информация:</h2>
-          <label class="feedback__label" for="tel">Контактный телефон*:</label>
-          <input class="feedback__input" id="tel" type="tel" name="tel" pattern="[+]{1}[0-9]{8}" placeholder="Введите телефон" required>
-          <label class="feedback__label" for="mail">Электронная почта*:</label>
-          <input class="feedback__input" id="mail" type="mail" name="mail" placeholder="Введите e-mail" required>
+        <fieldset class="feedback__fieldset feedback__fieldset--contacts">
+          <h2 class="feedback__legend feedback__legend--contacts">Контактная информация:</h2>
+          <div class="feedback__group feedback__group--contacts">
+            <label class="feedback__label" for="tel">Контактный&nbsp;телефон*:
+              <input class="feedback__input" id="tel" type="tel" name="tel" pattern="[+]{1}[0-9]{8}" placeholder="Введите телефон" required>
+            </label>
+            <label class="feedback__label" for="mail">Электронная&nbsp;почта*:
+              <input class="feedback__input" id="mail" type="mail" name="mail" placeholder="Введите e-mail" required>
+            </label>
+          </div>
         </fieldset>
 
-        <fieldset class="feedback__fieldset">
-          <h2 class="feedback__legend">Ваше общее впечатление:</h2>
-          <input class="feedback__input-radio" id="good" type="radio" name="impression" value="good" checked>
-          <label class="feedback__label-radio" for="good">Скорее положительное</label>
-          <input class="feedback__input-radio" id="bad" type="radio" name="impression" value="bad">
-          <label class="feedback__label-radio" for="bad">Скорее отрицательное</label>
-          <input class="feedback__input-radio" id="soso" type="radio" name="impression" value="soso">
-          <label class="feedback__label-radio" for="soso">Затрудняюсь ответить</label>
+        <fieldset class="feedback__fieldset feedback__fieldset--impression">
+          <h2 class="feedback__legend feedback__legend--impression">Ваше общее впечатление:</h2>
+          <div class="feedback__group feedback__group--impression">
+            <input class="feedback__input-radio" id="good" type="radio" name="impression" value="good" checked>
+            <label class="feedback__label-radio" for="good">Скорее положительное</label>
+            <input class="feedback__input-radio" id="bad" type="radio" name="impression" value="bad">
+            <label class="feedback__label-radio" for="bad">Скорее отрицательное</label>
+            <input class="feedback__input-radio" id="soso" type="radio" name="impression" value="soso">
+            <label class="feedback__label-radio" for="soso">Затрудняюсь ответить</label>
+          </div>
         </fieldset>
 
-        <fieldset class="feedback__fieldset">
-          <h2 class="feedback__legend">Посещенные достопримечательности:</h2>
-          <input class="feedback__input-check" id="bridge"type="checkbox" name="sight" value="bridge" checked>
-          <label class="feedback__label-check" for="bridge">Мост Дьявола</label>
-          <input class="feedback__input-check" id="mountain" type="checkbox" name="sight" value="mountain" checked>
-          <label class="feedback__label-check" for="mountain">Гора-Колокол</label>
-          <input class="feedback__input-check" id="park" type="checkbox" name="sight" value="park" checked>
-          <label class="feedback__label-check" for="park">Слайд-парк</label>
-          <input class="feedback__input-check" id="rocks" type="checkbox" name="sight" value="rocks">
-          <label class="feedback__label-check" for="rocks">Красные скалы</label>
+        <fieldset class="feedback__fieldset feedback__fieldset--sight">
+          <h2 class="feedback__legend feedback__legend--sight">Посещенные достопримечательности:</h2>
+          <div class="feedback__group feedback__group--sight">
+            <input class="feedback__input-check" id="bridge"type="checkbox" name="sight" value="bridge" checked>
+            <label class="feedback__label-check" for="bridge">Мост Дьявола</label>
+            <input class="feedback__input-check" id="mountain" type="checkbox" name="sight" value="mountain" checked>
+            <label class="feedback__label-check" for="mountain">Гора-Колокол</label>
+            <input class="feedback__input-check" id="park" type="checkbox" name="sight" value="park" checked>
+            <label class="feedback__label-check" for="park">Слайд-парк</label>
+            <input class="feedback__input-check" id="rocks" type="checkbox" name="sight" value="rocks">
+            <label class="feedback__label-check" for="rocks">Красные скалы</label>
+          </div>
         </fieldset>
 
-        <fieldset class="feedback__fieldset">
-          <h2 class="feedback__legend">Опишите свои эмоции:</h2>
+        <fieldset class="feedback__fieldset feedback__fieldset--comment">
+          <h2 class="feedback__legend feedback__legend--comment">Опишите свои эмоции:</h2>
           <textarea class="feedback__textarea" name="comment" placeholder="Опишите подробно все свои восторги"></textarea>
         </fieldset>
 
-        <div class="feedback__btn">
-          <button class="btn" type="submit">Отправить отзыв</button>
+        <div class="feedback__submit">
+          <button class="feedback__btn btn" type="submit">Отправить отзыв</button>
+          <span class="feedback__required">* &ndash; Обязательные поля</span>
         </div>
 
       </form>

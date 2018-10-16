@@ -1,23 +1,24 @@
 html,
 body {
-  height: 100%;
-  width: 320px;
   margin: 0 auto;
 }
 
 body {
-  margin: 0;
-  min-width: 260px;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
+  min-width: 320px;
+  min-height: 100vh;
   word-wrap: break-word;
   font-family: @font-primary;
-  font-size: @font-size;
-  line-height: @line-height;
+  .font(@font-size, @line-height);
   text-transform: uppercase;
   color: @black;
-  background-color: @white;
+  background-color: @color-bg;
+  box-shadow: 0 5px 15px 0 fade(@black, 20%);
+
+  @media (min-width: @tablet) {
+    max-width: 1200px;
+  }
 }
 
 img {

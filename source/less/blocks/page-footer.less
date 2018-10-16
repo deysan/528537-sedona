@@ -1,10 +1,30 @@
 .page-footer {
-  padding: 10px 0;
+  .container();
+  padding-top: 39px;
+  padding-bottom: 20px;
   text-align: center;
+  background-color: @white;
 }
 
 .page-footer__hashtag,
 .page-footer__socials,
 .page-footer__creator {
-  padding: 10px 0;
+  margin: 10px 0;
+}
+
+@media (min-width: @tablet) {
+  .page-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 7%;
+    padding-right: 7%;
+  }
+}
+
+@media (min-width: @desktop) {
+  .page-footer {
+    padding-left: 120px;
+    padding-right: 120px;
+  }
 }

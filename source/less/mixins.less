@@ -1,0 +1,38 @@
+.container() {
+  // max-width: 620px;
+  // width: 100%;
+  // margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  // box-sizing: border-box;
+
+  @media (min-width: @tablet) {
+    // min-width: 648px;
+    // max-width: 768px;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  @media (min-width: @desktop) {
+    // min-width: 1030px;
+    // margin: 0 auto;
+    // max-width: 1050px;
+  }
+}
+
+.font(@font-size, @line-height) {
+  font-size: @font-size;
+  line-height: @line-height;
+}
+
+.font-set(@font-size, @line-height, @font-weight) {
+  font-size: @font-size;
+  line-height: @line-height;
+  font-weight: @font-weight;
+}
+
+.list-reset() {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
