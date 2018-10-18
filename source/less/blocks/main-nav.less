@@ -6,14 +6,25 @@
   position: absolute;
   top: 0;
   right: 0;
-  width: 61px;
+  width: 64px;
   height: 56px;
   padding: 0;
-  z-index: 2;
   background-color: transparent;
   cursor: pointer;
   border: none;
   outline: none;
+  z-index: 3;
+
+  &--closed::before {
+    content: "";
+    position: absolute;
+    top: 18px;
+    right: 20px;
+    width: 24px;
+    height: 4px;
+    background-color: @color-base;
+    box-shadow: 0 8px 0 0 @color-base, 0 16px 0 0 @color-base;
+  }
 
   &--opened::before,
   &--opened::after {
@@ -33,6 +44,10 @@
 
   &--opened::after {
     transform: rotate(-45deg);
+  }
+
+  &--nojs {
+    display: none;
   }
 }
 
@@ -81,6 +96,26 @@
 
   &--active {
     pointer-events: none;
+  }
+}
+
+@media (max-width: @mobile) {
+  .main-nav--closed .main-nav__item {
+    display: none;
+
+    &--logo {
+      display: block;
+    }
+  }
+
+  .main-nav--nojs {
+    & .main-nav__toggle {
+      display: none;
+    }
+
+    & .main-nav__item {
+      display: block;
+    }
   }
 }
 
