@@ -24,6 +24,7 @@
   background-color: @color-base;
   background-repeat: no-repeat;
   background-position: center;
+  outline: none;
 
   &--tw {
     background-image: url("../img/icon-twitter.svg");
@@ -37,7 +38,8 @@
     background-image: url("../img/icon-youtube.svg");
   }
 
-  &:hover {
+  &:hover,
+  &:focus {
     background-color: @color-hover;
   }
 
