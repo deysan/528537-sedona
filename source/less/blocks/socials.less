@@ -24,18 +24,27 @@
   background-color: @color-base;
   background-repeat: no-repeat;
   background-position: center;
-}
 
-.socials__link--tw {
-  background-image: url("../img/icon-twitter.svg");
-}
+  &--tw {
+    background-image: url("../img/icon-twitter.svg");
+  }
 
-.socials__link--fb {
-  background-image: url("../img/icon-facebook.svg");
-}
+  &--fb {
+    background-image: url("../img/icon-facebook.svg");
+  }
 
-.socials__link--yt {
-  background-image: url("../img/icon-youtube.svg");
+  &--yt {
+    background-image: url("../img/icon-youtube.svg");
+  }
+
+  &:hover {
+    background-color: @color-hover;
+  }
+
+  &:active {
+    background-color: @color-active;
+    fill: fade(@white, 30%);
+  }
 }
 
 @media (min-width: @tablet) {

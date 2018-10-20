@@ -13,4 +13,19 @@
   border: none;
   outline: none;
   cursor: pointer;
+
+  &:hover {
+    background-color: @color-hover;
+  }
+
+  &:active {
+    color: fade(@white, 30%);
+    background-color: @color-active;
+  }
+
+  &.disabled,
+  &:disabled {
+    background-color: @color-bg;
+    pointer-events: none;
+  }
 }
