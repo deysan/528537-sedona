@@ -10,7 +10,7 @@
 .photo__item {
   position: relative;
   .container();
-  padding-top: 23px;
+  padding-top: 24px;
   padding-bottom: 17px;
 
   &::before {
@@ -27,7 +27,7 @@
 
 .photo__image {
   display: block;
-  margin-bottom: 10px;
+  margin-bottom: 9px;
   height: 280px;
   width: 100%;
   background-color: @color-bg;
@@ -62,7 +62,7 @@
   .photo__list {
     display: flex;
     flex-wrap: wrap;
-    padding: 45px 60px 35px;
+    padding: 42px 60px 35px;
   }
 
   .photo__item {
@@ -84,12 +84,12 @@
 
   .photo__image {
     margin: 0;
-    height: 269px;
+    height: 267px;
   }
 
   .photo__info {
     position: relative;
-    padding: 15px 20px;
+    padding: 15px 20px 17px;
     background-color: @color-bg;
   }
 
@@ -111,12 +111,19 @@
   .photo__item {
     width: 33%;
     flex-grow: 1;
+
+    &:nth-child(n+2) {
+      .photo__like {
+        padding-right: 10px;
+      }
+    }
   }
 
   .photo__info {
     position: absolute;
     bottom: 0;
     width: 100%;
+    padding-bottom: 16px;
     color: @white;
     background-color: fade(@black, 30%);
     box-sizing: border-box;

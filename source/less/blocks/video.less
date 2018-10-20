@@ -1,6 +1,7 @@
 .video {
   position: relative;
   padding-top: 16px;
+  padding-bottom: 0;
 
   &::before {
     content: "";
@@ -21,8 +22,8 @@
 }
 
 .video__player {
-  margin-top: 33px;
-  margin-bottom: 92px;
+  margin-top: 35px;
+  margin-bottom: 105px;
 }
 
 .video__preview {
@@ -36,10 +37,14 @@
 }
 
 @media (min-width: @tablet) {
+  .video {
+    padding-top: 14px;
+  }
+
   .video__player {
     .container();
-    padding-top: 40px;
-    margin-bottom: 25px;
+    padding-top: 37px;
+    margin-bottom: 41px;
   }
 
   .video__preview {
@@ -51,8 +56,12 @@
 }
 
 @media (min-width: @desktop) {
+  .video {
+    padding-top: 18px;
+  }
+
   .video__player {
-    margin-bottom: 60px;
+    margin-bottom: 85px;
   }
 
   .video__preview {
