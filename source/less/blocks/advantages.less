@@ -20,6 +20,7 @@
 }
 
 .advantages__item {
+  position: relative;
   width: 100%;
   padding: 13px 0 13px;
   order: 1;
@@ -45,11 +46,12 @@
     padding-left: 70px;
     text-align: left;
     background-color: @white;
+    box-sizing: border-box;
     order: 2;
   }
 
   &--1 {
-    padding-top: 46px;
+    padding-top: 48px;
     background-image: url("../img/bg-triangle.svg");
     background-repeat: no-repeat;
     background-position: center -15px;
@@ -71,6 +73,42 @@
 
   &--5 {
     order: 6;
+  }
+
+  &--house::before {
+    position: absolute;
+    content: "";
+    top: 7px;
+    left: -48px;
+    width: 37px;
+    height: 36px;
+    background-image: url("../img/icon-house.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  &--gift::before {
+    position: absolute;
+    content: "";
+    top: 5px;
+    left: -44px;
+    width: 32px;
+    height: 37px;
+    background-image: url("../img/icon-gift.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  &--food::before {
+    position: absolute;
+    content: "";
+    top: 13px;
+    left: -50px;
+    width: 38px;
+    height: 34px;
+    background-image: url("../img/icon-burger.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
   }
 }
 
@@ -184,16 +222,41 @@
       order: 2;
     }
 
-    // .advantages__info {
-    //   width: 33%;
-    // }
+    &--house::before {
+      position: absolute;
+      content: "";
+      top: -85px;
+      left: 50%;
+      width: 75px;
+      height: 72px;
+      transform: translateX(-50%);
+    }
+
+    &--food::before {
+      position: absolute;
+      content: "";
+      top: -82px;
+      left: 50%;
+      width: 77px;
+      height: 68px;
+      transform: translateX(-50%);
+    }
+
+    &--gift::before {
+      position: absolute;
+      content: "";
+      top: -87px;
+      left: 50%;
+      width: 64px;
+      height: 75px;
+      transform: translateX(-50%);
+    }
 
     .advantages__title {
       max-width: 155px;
       margin-top: 15px;
       margin-bottom: 8px;
       .font-set(21px, 26px, bold);
-      // margin: 0 auto;
     }
 
     .advantages__number {
@@ -202,7 +265,6 @@
     }
 
     .advantages__photo {
-      // width: auto;
       height: auto;
       margin-top: 0;
 
@@ -222,7 +284,7 @@
     &--more {
       .advantages__item {
         flex-basis: 300px;
-        padding-left: 10px;
+        padding-left: 11px;
       }
     }
   }
