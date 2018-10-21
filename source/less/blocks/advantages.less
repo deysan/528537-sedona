@@ -169,7 +169,7 @@
 
       .advantages__item {
         flex-direction: column;
-        flex-basis: 170px;
+        flex-basis: 162px;
       }
     }
   }
@@ -223,58 +223,49 @@
     }
 
     &--house::before {
-      position: absolute;
-      content: "";
       top: -85px;
-      left: 50%;
+      left: 43px;
       width: 75px;
       height: 72px;
-      transform: translateX(-50%);
     }
 
     &--food::before {
-      position: absolute;
-      content: "";
       top: -82px;
-      left: 50%;
+      left: 43px;
       width: 77px;
       height: 68px;
-      transform: translateX(-50%);
     }
 
     &--gift::before {
-      position: absolute;
-      content: "";
       top: -87px;
-      left: 50%;
+      left: 49px;
       width: 64px;
       height: 75px;
-      transform: translateX(-50%);
+    }
+  }
+
+  .advantages__title {
+    max-width: 155px;
+    margin-top: 15px;
+    margin-bottom: 8px;
+    .font-set(21px, 26px, bold);
+  }
+
+  .advantages__number {
+    margin-top: 8px;
+    margin-bottom: 22px;
+  }
+
+  .advantages__photo {
+    height: auto;
+    margin-top: 0;
+
+    &--city {
+      background-image: url("../img/main-city-tablet@1x.jpg");
     }
 
-    .advantages__title {
-      max-width: 155px;
-      margin-top: 15px;
-      margin-bottom: 8px;
-      .font-set(21px, 26px, bold);
-    }
-
-    .advantages__number {
-      margin-top: 8px;
-      margin-bottom: 22px;
-    }
-
-    .advantages__photo {
-      height: auto;
-      margin-top: 0;
-
-      &--city {
-        background-image: url("../img/main-city-tablet@1x.jpg");
-      }
-
-      &--bridge {
-        background-image: url("../img/main-bridge-tablet@1x.jpg");
-      }
+    &--bridge {
+      background-image: url("../img/main-bridge-tablet@1x.jpg");
     }
   }
 }
@@ -323,6 +314,18 @@
         width: 220px;
         margin: 13px auto;
       }
+    }
+
+    &--house::before {
+      left: 120px;
+    }
+
+    &--food::before {
+      left: 122px;
+    }
+
+    &--gift::before {
+      left: 126px;
     }
   }
 
