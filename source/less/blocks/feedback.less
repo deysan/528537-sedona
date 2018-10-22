@@ -340,9 +340,21 @@
     &::before {
       display: none;
     }
+
+    &:first-child::after {
+      position: absolute;
+      content: "";
+      top: 50%;
+      left: 0;
+      width: 1px;
+      height: 300px;
+      background-color: @color-bg;
+      transform: translateY(-50%);
+    }
   }
 
   .feedback__legend {
+    position: relative;
     .font-set(21px, 26px, bold);
 
     &--impression {
@@ -360,13 +372,32 @@
     }
 
     &--sight {
-      width: 300px;
-      margin: 0 auto;
+      display: flex;
+      justify-content: center;
       margin-bottom: 22px;
     }
 
     &--comment {
       margin-bottom: 58px;
+    }
+
+    &--line::after {
+      position: absolute;
+      content: "";
+      top: 50%;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background-color: @color-bg;
+      transform: translateY(-50%);
+      z-index: 1;
+    }
+
+    &--noline {
+      position: relative;
+      padding: 0 60px;
+      background-color: @white;
+      z-index: 2;
     }
   }
 
