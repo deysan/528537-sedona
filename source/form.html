@@ -14,7 +14,11 @@
         <ul class="main-nav__list">
           <li class="main-nav__item main-nav__item--logo">
             <a class="main-nav__link main-nav__link--logo" href="index.html">
-              <img class="page-logo" src="img/logo-sedona-mobile.svg">
+              <picture>
+                <source media="(min-width: 1200px)" srcset="img/logo-sedona-desktop.svg">
+                <source media="(min-width: 768px)" srcset="img/logo-sedona-tablet.svg">
+                <img src="img/logo-sedona-mobile.svg" alt="Седона" width="102" height="83">
+              </picture>
             </a>
           </li>
           <li class="main-nav__item main-nav__item--left">
