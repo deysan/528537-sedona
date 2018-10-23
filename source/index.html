@@ -9,15 +9,15 @@
   <body>
 
     <header class="page-header">
-      <nav class="main-nav">
-        <button class="main-nav__toggle main-nav__toggle--opened"><span class="visually-hidden">Открыть меню</span></button>
+      <nav class="main-nav main-nav--closed main-nav--nojs">
+        <button class="main-nav__toggle main-nav__toggle--closed main-nav__toggle--nojs"><span class="visually-hidden">Открыть меню</span></button>
         <ul class="main-nav__list">
           <li class="main-nav__item main-nav__item--logo">
             <a class="main-nav__link main-nav__link--logo main-nav__link--active" href="index.html">
               <img class="page-logo" src="img/logo-sedona-mobile.svg">
             </a>
           </li>
-          <li class="main-nav__item main-nav__item--left">
+          <li class="main-nav__item main-nav__item--left main-nav__item--active">
             <a class="main-nav__link main-nav__link--active" href="index.html">Главная</a>
           </li>
           <li class="main-nav__item main-nav__item--left">
@@ -58,7 +58,7 @@
             <div class="advantages__info">
               <h3 class="advantages__title">Там есть мост&nbsp;дьявола</h3>
               <span class="advantages__number">&ndash;&nbsp;№2&nbsp;&ndash;</span>
-              <p class="advantages__text">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
+              <p class="advantages__text">Да, по нему можно пройти! Если&nbsp;вы осмелитесь, конечно</p>
             </div>
             <div class="advantages__photo advantages__photo--bridge"></div>
           </li>
@@ -87,7 +87,7 @@
             <ul class="advantages__list advantages__list--more">
               <li class="advantages__item advantages__item--house">
                 <h4 class="advantages__title">Жилье</h4>
-                <p class="advantages__text">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
+                <p class="advantages__text">Рекомендуем пожить в настоящем мотеле, все&nbsp;как в кино!</p>
               </li>
               <li class="advantages__item advantages__item--gift">
                 <h4 class="advantages__title">Сувениры</h4>
@@ -95,7 +95,7 @@
               </li>
               <li class="advantages__item advantages__item--food">
                 <h4 class="advantages__title">Еда</h4>
-                <p class="advantages__text">Всегда заказывайте фирменный&nbsp;бургер, вы не разочаруетесь!</p>
+                <p class="advantages__text">Всегда заказывайте фирменный&nbsp;бургер, вы&nbsp;не разочаруетесь!</p>
               </li>
             </ul>
           </li>
@@ -105,7 +105,7 @@
       <section class="section hotel-search">
         <h2 class="section__title visually-hidden">Поиск гостиницы</h2>
         <h3 class="section__subtitle">Заинтересовались?</h3>
-        <p class="section__text">Укажите предполагаемые даты поездки,&nbsp;и&nbsp;мы покажем вам лучшие предложения&nbsp;гостиниц в Седоне</p>
+        <p class="section__text">Укажите предполагаемые даты поездки, и&nbsp;мы&nbsp;покажем&nbsp;вам&nbsp;лучшие предложения&nbsp;гостиниц в Седоне</p>
         <div class="hotel-search__link">
           <a class="btn" href="#">Найти гостиницу</a>
         </div>
@@ -143,6 +143,28 @@
         <a class="creator__link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">htmlacademy.ru</a>
       </p>
     </footer>
+
+    <script>
+      var navMain = document.querySelector('.main-nav');
+      var navToggle = document.querySelector('.main-nav__toggle');
+
+      navMain.classList.remove('main-nav--nojs');
+      navToggle.classList.remove("main-nav__toggle--nojs");
+
+      navToggle.addEventListener("click", function() {
+        if (navMain.classList.contains("main-nav--closed")) {
+          navMain.classList.remove("main-nav--closed");
+          navMain.classList.add("main-nav--opened");
+          navToggle.classList.remove("main-nav__toggle--closed");
+          navToggle.classList.add("main-nav__toggle--opened");
+        } else {
+          navMain.classList.add("main-nav--closed");
+          navMain.classList.remove("main-nav--opened");
+          navToggle.classList.add("main-nav__toggle--closed");
+          navToggle.classList.remove("main-nav__toggle--opened");
+        }
+      });
+    </script>
 
   </body>
 </html>

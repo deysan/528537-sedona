@@ -1,7 +1,7 @@
 .btn {
   display: inline-block;
   width: 100%;
-  padding: 15px;
+  padding: 16px;
   .font-set(21px, 26px, bold);
   text-align: center;
   text-decoration: none;
@@ -13,4 +13,20 @@
   border: none;
   outline: none;
   cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-color: @color-hover;
+  }
+
+  &:active {
+    color: fade(@white, 30%);
+    background-color: @color-active;
+  }
+
+  &.disabled,
+  &:disabled {
+    background-color: @color-bg;
+    pointer-events: none;
+  }
 }

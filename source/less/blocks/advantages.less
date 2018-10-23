@@ -20,6 +20,8 @@
 }
 
 .advantages__item {
+  position: relative;
+  width: 100%;
   padding: 13px 0 13px;
   order: 1;
 
@@ -44,11 +46,12 @@
     padding-left: 70px;
     text-align: left;
     background-color: @white;
+    box-sizing: border-box;
     order: 2;
   }
 
   &--1 {
-    padding-top: 46px;
+    padding-top: 48px;
     background-image: url("../img/bg-triangle.svg");
     background-repeat: no-repeat;
     background-position: center -15px;
@@ -71,6 +74,42 @@
   &--5 {
     order: 6;
   }
+
+  &--house::before {
+    position: absolute;
+    content: "";
+    top: 7px;
+    left: -48px;
+    width: 37px;
+    height: 36px;
+    background-image: url("../img/icon-house.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  &--gift::before {
+    position: absolute;
+    content: "";
+    top: 5px;
+    left: -44px;
+    width: 32px;
+    height: 37px;
+    background-image: url("../img/icon-gift.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  &--food::before {
+    position: absolute;
+    content: "";
+    top: 13px;
+    left: -50px;
+    width: 38px;
+    height: 34px;
+    background-image: url("../img/icon-burger.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
 }
 
 .advantages__info {
@@ -86,10 +125,14 @@
 }
 
 .advantages__text {
-  margin: 0;
+  margin: 0 auto;
   margin-top: 13px;
   margin-bottom: 13px;
   padding: 0;
+}
+
+.advantages__number {
+  display: block;
 }
 
 .advantages__photo {
@@ -126,7 +169,7 @@
 
       .advantages__item {
         flex-direction: column;
-        flex-basis: 170px;
+        flex-basis: 162px;
       }
     }
   }
@@ -143,24 +186,25 @@
 
       .advantages__info {
         width: 33%;
-        padding: 30px 45px 32px;
+        padding: 30px 44px 32px;
       }
     }
 
     &--small {
       padding-top: 30px;
-      padding-bottom: 35px;
+      padding-bottom: 33px;
       flex-basis: 33%;
+      flex-grow: 1;
 
       .advantages__info {
-        padding-left: 40px;
-        padding-right: 40px;
+        padding-left: 49px;
+        padding-right: 49px;
       }
     }
 
     &--more {
       padding-top: 145px;
-      padding-bottom: 45px;
+      padding-bottom: 47px;
       text-align: center;
     }
 
@@ -178,28 +222,50 @@
       order: 2;
     }
 
-    // .advantages__info {
-    //   width: 33%;
-    // }
-
-    .advantages__title {
-      max-width: 155px;
-      .font-set(21px, 26px, bold);
-      // margin: 0 auto;
+    &--house::before {
+      top: -85px;
+      left: 43px;
+      width: 75px;
+      height: 72px;
     }
 
-    .advantages__photo {
-      // width: auto;
-      height: auto;
-      margin-top: 0;
+    &--food::before {
+      top: -82px;
+      left: 43px;
+      width: 77px;
+      height: 68px;
+    }
 
-      &--city {
-        background-image: url("../img/main-city-tablet@1x.jpg");
-      }
+    &--gift::before {
+      top: -87px;
+      left: 49px;
+      width: 64px;
+      height: 75px;
+    }
+  }
 
-      &--bridge {
-        background-image: url("../img/main-bridge-tablet@1x.jpg");
-      }
+  .advantages__title {
+    max-width: 155px;
+    margin-top: 15px;
+    margin-bottom: 8px;
+    .font-set(21px, 26px, bold);
+  }
+
+  .advantages__number {
+    margin-top: 8px;
+    margin-bottom: 22px;
+  }
+
+  .advantages__photo {
+    height: auto;
+    margin-top: 0;
+
+    &--city {
+      background-image: url("../img/main-city-tablet@1x.jpg");
+    }
+
+    &--bridge {
+      background-image: url("../img/main-bridge-tablet@1x.jpg");
     }
   }
 }
@@ -209,17 +275,57 @@
     &--more {
       .advantages__item {
         flex-basis: 300px;
+        padding-left: 11px;
       }
     }
   }
 
   .advantages__item {
     &--small {
-      padding-bottom: 60px;
+      padding-bottom: 55px;
+    }
+
+    &--big {
+      .advantages__info {
+        width: 467px;
+        padding-top: 38px;
+      }
+
+      .advantages__text {
+        width: 250px;
+        margin: 0 auto;
+      }
     }
 
     &--more {
-      padding-bottom: 65px;
+      padding-left: 40px;
+      padding-right: 40px;
+      padding-bottom: 68px;
+    }
+
+    &--1 {
+      .advantages__text {
+        width: 265px;
+      }
+    }
+
+    &--gift {
+      .advantages__text {
+        width: 220px;
+        margin: 13px auto;
+      }
+    }
+
+    &--house::before {
+      left: 120px;
+    }
+
+    &--food::before {
+      left: 122px;
+    }
+
+    &--gift::before {
+      left: 126px;
     }
   }
 

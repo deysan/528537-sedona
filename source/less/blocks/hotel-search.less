@@ -1,6 +1,6 @@
 .hotel-search {
   .container();
-  max-width: 460px;
+  max-width: 456px;
   margin: 0 auto;
   padding-top: 15px;
   background-color: @white;
@@ -17,7 +17,15 @@
   }
 
   .hotel-search__link {
-    padding-top: 56px;
-    padding-bottom: 43px;
+    min-width: 300px;
+    padding-top: 42px;
+    padding-bottom: 42px;
+  }
+}
+
+@media (min-width: @desktop) {
+  .hotel-search__link {
+    padding-top: 45px;
+    padding-bottom: 50px;
   }
 }

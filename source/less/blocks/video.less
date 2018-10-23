@@ -1,6 +1,7 @@
 .video {
   position: relative;
   padding-top: 16px;
+  padding-bottom: 0;
 
   &::before {
     content: "";
@@ -21,25 +22,100 @@
 }
 
 .video__player {
-  margin-top: 33px;
-  margin-bottom: 92px;
+  margin-top: 35px;
+  margin-bottom: 105px;
 }
 
 .video__preview {
+  position: relative;
   display: block;
   width: 100%;
-  max-width: 650px;
+  // max-width: 650px;
   height: 200px;
   margin: 0 auto;
   background-color: @color-bg;
   object-fit: cover;
 }
 
+.video__controls {
+  position: absolute;
+  .container();
+  bottom: -65px;
+  left: 0;
+  width: 100%;
+  height: 110px;
+  box-sizing: border-box;
+}
+
+.video__range {
+  position: relative;
+  height: 45px;
+  background-color: @black;
+  opacity: 0.6;
+}
+
+.video__scale {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 20px;
+  right: 20px;
+  height: 3px;
+  background: @white;
+  transform: translateY(-50%);
+  opacity: 0.2;
+}
+
+.video__toggle {
+  position: absolute;
+  top: 50%;
+  left: 20%;
+  width: 9px;
+  height: 9px;
+  background-color: @white;
+  border-radius: 50%;
+  transform: translateY(-50%);
+}
+
+.video__buttons {
+  display: flex;
+  .container();
+  justify-content: space-between;
+  align-items: center;
+  height: 65px;
+  background-color: @color-bg;
+}
+
+.video__button {
+  cursor: pointer;
+
+  &--replay {
+    width: 16px;
+    height: 20px;
+    margin-right: auto;
+  }
+
+  &--subtitles {
+    width: 32px;
+    height: 20px;
+  }
+
+  &--fullscreen {
+    width: 20px;
+    height: 20px;
+    margin-left: 30px;
+  }
+}
+
 @media (min-width: @tablet) {
+  .video {
+    padding-top: 14px;
+  }
+
   .video__player {
     .container();
-    padding-top: 40px;
-    margin-bottom: 25px;
+    padding-top: 37px;
+    margin-bottom: 41px;
   }
 
   .video__preview {
@@ -48,14 +124,76 @@
     background-color: @color-bg;
     object-fit: cover;
   }
+
+  .video__controls {
+    display: flex;
+    align-items: center;
+    bottom: 0;
+    left: 50px;
+    right: 50px;
+    width: auto;
+    padding: 0;
+    background-color: @black;
+    opacity: 0.6;
+  }
+
+  .video__range {
+    // top: 50%;
+    width: 100%;
+    height: auto;
+    background-color: transparent;
+    opacity: 1;
+  }
+
+  .video__scale {
+    left: 95px;
+    // right: 95px;
+  }
+
+  .video__toggle {
+    left: 30%;
+  }
+
+  .video__buttons {
+    .container();
+    height: auto;
+    background-color: transparent;
+  }
+
+  .video__button {
+    cursor: pointer;
+
+    &--replay {
+      position: absolute;
+      left: 35px;
+      fill: @white;
+    }
+
+    &--subtitles {
+      fill: @white;
+    }
+
+    &--fullscreen {
+      fill: @white;
+    }
+  }
 }
 
 @media (min-width: @desktop) {
+  .video {
+    padding-top: 18px;
+  }
+
   .video__player {
-    margin-bottom: 60px;
+    margin-bottom: 85px;
   }
 
   .video__preview {
     max-width: 800px;
+  }
+
+  .video__controls {
+    left: 200px;
+    right: 200px;
   }
 }

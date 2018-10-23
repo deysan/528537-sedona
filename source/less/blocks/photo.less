@@ -10,7 +10,7 @@
 .photo__item {
   position: relative;
   .container();
-  padding-top: 23px;
+  padding-top: 24px;
   padding-bottom: 17px;
 
   &::before {
@@ -27,7 +27,7 @@
 
 .photo__image {
   display: block;
-  margin-bottom: 10px;
+  margin-bottom: 9px;
   height: 280px;
   width: 100%;
   background-color: @color-bg;
@@ -52,17 +52,31 @@
 }
 
 .photo__like {
+  position: relative;
   display: inline-block;
   padding-top: 10px;
   padding-left: 35px;
   font-weight: bold;
+
+  &::before {
+    position: absolute;
+    content: "";
+    bottom: 3px;
+    left: 0;
+    width: 22px;
+    height: 22px;
+    background-image: url("../img/icon-like.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    opacity: 0.3;
+  }
 }
 
 @media (min-width: @tablet) {
   .photo__list {
     display: flex;
     flex-wrap: wrap;
-    padding: 45px 60px 35px;
+    padding: 42px 60px 35px;
   }
 
   .photo__item {
@@ -75,6 +89,10 @@
       .photo__image {
         height: 400px;
       }
+
+      .photo__like {
+        right: 20px;
+      }
     }
 
     &::before {
@@ -84,21 +102,26 @@
 
   .photo__image {
     margin: 0;
-    height: 269px;
+    height: 267px;
   }
 
   .photo__info {
     position: relative;
-    padding: 15px 20px;
+    padding: 15px 20px 17px;
     background-color: @color-bg;
   }
 
   .photo__like {
     position: absolute;
     top: 50%;
-    right: 20px;
+    right: 30px;
     padding-top: 0;
     transform: translateY(-50%);
+
+    &::before {
+      bottom: 0;
+      left: 4px;
+    }
   }
 }
 
@@ -111,12 +134,19 @@
   .photo__item {
     width: 33%;
     flex-grow: 1;
+
+    &:nth-child(n+2) {
+      .photo__like {
+        padding-right: 10px;
+      }
+    }
   }
 
   .photo__info {
     position: absolute;
     bottom: 0;
     width: 100%;
+    padding-bottom: 16px;
     color: @white;
     background-color: fade(@black, 30%);
     box-sizing: border-box;
@@ -124,5 +154,13 @@
 
   .photo__autor {
     color: @white;
+  }
+
+  .photo__like {
+    right: 20px;
+
+    &::before {
+      fill: @white;
+    }
   }
 }

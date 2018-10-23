@@ -2,4 +2,14 @@
   .font-set(21px, 21px, bold);
   text-decoration: none;
   color: @black;
+  outline: none;
+
+  &:hover,
+  &:focus {
+    color: @color-base;
+  }
+
+  &:active {
+    color: fade(@black, 30%);
+  }
 }
