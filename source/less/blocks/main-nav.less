@@ -106,7 +106,11 @@
   &--logo {
     min-height: 30px;
     padding: 0;
-    pointer-events: none;
+    // pointer-events: none;
+    & img {
+      width: 102px;
+      height: 83px;
+    }
   }
 
   &--active {
@@ -216,6 +220,19 @@
       &:focus {
         color: #604e43;
       }
+    }
+  }
+}
+
+@media (min-width: @desktop) {
+  .main-nav {
+    min-height: 96px;
+  }
+
+  .main-nav__link--logo {
+    & img {
+      width: 187px;
+      height: 96px;
     }
   }
 }

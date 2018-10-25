@@ -14,7 +14,11 @@
         <ul class="main-nav__list">
           <li class="main-nav__item main-nav__item--logo">
             <a class="main-nav__link main-nav__link--logo" href="index.html">
-              <img class="page-logo" src="img/logo-sedona-mobile.svg">
+              <picture>
+                <source media="(min-width: 1200px)" srcset="img/logo-sedona-desktop.svg">
+                <source media="(min-width: 768px)" srcset="img/logo-sedona-tablet.svg">
+                <img src="img/logo-sedona-mobile.svg" alt="Седона" width="102" height="83">
+              </picture>
             </a>
           </li>
           <li class="main-nav__item main-nav__item--left">
@@ -47,7 +51,11 @@
         <h2 class="section__title visually-hidden">Фотографии</h2>
         <ul class="photo__list">
           <li class="photo__item">
-            <img class="photo__image" src="img/photo-sunset-mobile@1x.jpg" alt="Неродные просторы" width="280" height="280">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/photo-sunset-desktop@1x.jpg 1x, img/photo-sunset-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/photo-sunset-tablet@1x.jpg 1x, img/photo-sunset-tablet@2x.jpg 2x">
+              <img class="photo__image" src="img/photo-sunset-mobile@1x.jpg" srcset="img/photo-sunset-mobile@2x.jpg" alt="Неродные просторы" width="280" height="280">
+            </picture>
             <div class="photo__info">
               <h3 class="photo__title">Неродные просторы</h3>
               <p class="photo__autor">Автор фото: Борис</p>
@@ -55,7 +63,11 @@
             </div>
           </li>
           <li class="photo__item">
-            <img class="photo__image" src="img/photo-cactus-mobile@1x.jpg" alt="Местная растительность" width="280" height="280">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/photo-cactus-desktop@1x.jpg 1x, img/photo-cactus-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/photo-cactus-tablet@1x.jpg 1x, img/photo-cactus-tablet@2x.jpg 2x">
+              <img class="photo__image" src="img/photo-cactus-mobile@1x.jpg" srcset="img/photo-cactus-mobile@2x.jpg" alt="Местная растительность" width="280" height="280">
+            </picture>
             <div class="photo__info">
               <h3 class="photo__title">Местная растительность</h3>
               <p class="photo__autor">Автор фото: Сергей</p>
@@ -63,7 +75,11 @@
             </div>
           </li>
           <li class="photo__item">
-            <img class="photo__image" src="img/photo-roads-mobile@1x.jpg" alt="Дорога на Север" width="280" height="280">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/photo-roads-desktop@1x.jpg 1x, img/photo-roads-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/photo-roads-tablet@1x.jpg 1x, img/photo-roads-tablet@2x.jpg 2x">
+              <img class="photo__image" src="img/photo-roads-mobile@1x.jpg" srcset="img/photo-roads-mobile@2x.jpg" alt="Дорога на Север" width="280" height="280">
+            </picture>
             <div class="photo__info">
               <h3 class="photo__title">Дорога на Север</h3>
               <p class="photo__autor">Автор фото: Петр</p>
@@ -71,7 +87,11 @@
             </div>
           </li>
           <li class="photo__item">
-            <img class="photo__image" src="img/photo-bridge-mobile@1x.jpg" alt="Мост Дьявола" width="280" height="280">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/photo-bridge-desktop@1x.jpg 1x, img/photo-bridge-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/photo-bridge-tablet@1x.jpg 1x, img/photo-bridge-tablet@2x.jpg 2x">
+              <img class="photo__image" src="img/photo-bridge-mobile@1x.jpg" srcset="img/photo-bridge-mobile@2x.jpg" alt="Мост Дьявола" width="280" height="280">
+            </picture>
             <div class="photo__info">
               <h3 class="photo__title">Мост Дьявола</h3>
               <p class="photo__autor">Автор фото: Антон</p>
@@ -89,7 +109,11 @@
           <p class="section__text">Смотрите видеопрезентацию и скорее&nbsp;за&nbsp;билетами, пока они&nbsp;не подорожали в очередной раз!</p>
         </div>
         <div class="video__player">
-          <img class="video__preview" src="img/video-mobile@1x.jpg" alt="Видеопрезентацию Седоны">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="img/video-desktop@1x.jpg 1x, img/video-desktop@2x.jpg 2x">
+            <source media="(min-width: 768px)" srcset="img/video-tablet@1x.jpg 1x, img/video-tablet@2x.jpg 2x">
+            <img class="video__preview" src="img/video-mobile@1x.jpg" srcset="img/video-mobile@2x.jpg" alt="Видеопрезентацию Седоны" width="320" height="200">
+          </picture>
           <div class="video__controls">
             <div class="video__range">
               <div class="video__scale"></div>
