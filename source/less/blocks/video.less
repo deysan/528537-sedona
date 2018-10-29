@@ -87,6 +87,7 @@
 }
 
 .video__button {
+  fill: #5c6870;
   cursor: pointer;
 
   &--replay {
@@ -104,6 +105,15 @@
     width: 20px;
     height: 20px;
     margin-left: 30px;
+  }
+
+  &:hover,
+  &:focus {
+    fill: #333333;
+  }
+
+  &:active {
+    fill: fade(#5c6870, 30%);
   }
 }
 
@@ -161,20 +171,21 @@
   }
 
   .video__button {
+    fill: @white;
     cursor: pointer;
 
     &--replay {
       position: absolute;
       left: 35px;
-      fill: @white;
     }
 
-    &--subtitles {
-      fill: @white;
+    &:hover,
+    &:focus {
+      fill: fade(@white, 60%);
     }
-
-    &--fullscreen {
-      fill: @white;
+  
+    &:active {
+      fill: fade(@white, 30%);
     }
   }
 }

@@ -59,7 +59,11 @@
             <div class="photo__info">
               <h3 class="photo__title">Неродные просторы</h3>
               <p class="photo__autor">Автор фото: Борис</p>
-              <span class="photo__like">1350</span>
+              <!-- <span class="photo__like">1350</span> -->
+              <a class="photo__like" href="#like">
+                <svg width="22" height="20"><use xlink:href="img/sprite.svg#icon-like"></use></svg>
+                <span>1350</span>
+              </a>
             </div>
           </li>
           <li class="photo__item">
@@ -71,7 +75,11 @@
             <div class="photo__info">
               <h3 class="photo__title">Местная растительность</h3>
               <p class="photo__autor">Автор фото: Сергей</p>
-              <span class="photo__like">143</span>
+              <!-- <span class="photo__like">143</span> -->
+              <a class="photo__like" href="#like">
+                <svg width="22" height="20"><use xlink:href="img/sprite.svg#icon-like"></use></svg>
+                <span>143</span>
+              </a>
             </div>
           </li>
           <li class="photo__item">
@@ -83,7 +91,11 @@
             <div class="photo__info">
               <h3 class="photo__title">Дорога на Север</h3>
               <p class="photo__autor">Автор фото: Петр</p>
-              <span class="photo__like">96</span>
+              <!-- <span class="photo__like">96</span> -->
+              <a class="photo__like" href="#like">
+                <svg width="22" height="20"><use xlink:href="img/sprite.svg#icon-like"></use></svg>
+                <span>96</span>
+              </a>
             </div>
           </li>
           <li class="photo__item">
@@ -95,7 +107,10 @@
             <div class="photo__info">
               <h3 class="photo__title">Мост Дьявола</h3>
               <p class="photo__autor">Автор фото: Антон</p>
-              <span class="photo__like">254</span>
+              <a class="photo__like" href="#like">
+                <svg width="22" height="20"><use xlink:href="img/sprite.svg#icon-like"></use></svg>
+                <span>254</span>
+              </a>
             </div>
           </li>
         </ul>
@@ -120,9 +135,9 @@
               <div class="video__toggle"></div>
             </div>
             <div class="video__buttons">
-              <img class="video__button video__button--replay" src="img/icon-video-replay.svg">
-              <img class="video__button video__button--subtitles" src="img/icon-video-subtitles.svg">
-              <img class="video__button video__button--fullscreen" src="img/icon-video-fullscreen.svg">
+              <svg class="video__button video__button--replay" width="16" height="20"><use xlink:href="img/sprite.svg#icon-video-replay"></use></svg>
+              <svg class="video__button video__button--subtitles" width="32" height="20"><use xlink:href="img/sprite.svg#icon-video-subtitles"></use></svg>
+              <svg class="video__button video__button--fullscreen" width="20" height="20"><use xlink:href="img/sprite.svg#icon-video-fullscreen"></use></svg>
             </div>
           </div>
         </div>
@@ -137,22 +152,28 @@
           <li class="socials__item">
             <a class="socials__link socials__link--tw" href="#tw">
               <span class="visually-hidden">Твиттер</span>
+              <svg class="socials__icon" width="18" height="15"><use xlink:href="img/sprite.svg#icon-tw"></use></svg>
             </a>
           </li>
           <li class="socials__item">
             <a class="socials__link socials__link--fb" href="#fb">
               <span class="visually-hidden">Фейсбук</span>
+              <svg class="socials__icon" width="9" height="18"><use xlink:href="img/sprite.svg#icon-fb"></use></svg>
             </a>
           </li>
           <li class="socials__item">
             <a class="socials__link socials__link--yt" href="#yt">
               <span class="visually-hidden">YouTube</span>
+              <svg class="socials__icon" width="20" height="14"><use xlink:href="img/sprite.svg#icon-yt"></use></svg>
             </a>
           </li>
         </ul>
       </div>
       <p class="page-footer__creator creator">Разработано
-        <a class="creator__link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">htmlacademy.ru</a>
+        <a class="creator__link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
+          <span class="visually-hidden">htmlacademy.ru</span>
+          <svg width="40" height="40"><use xlink:href="img/sprite.svg#logo-htmlacademy"></use></svg>
+        </a>
       </p>
     </footer>
 
