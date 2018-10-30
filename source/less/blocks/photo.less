@@ -35,7 +35,7 @@
 }
 
 .photo__info {
-  padding-top: 6px;
+  padding-top: 5px;
   text-align: left;
 }
 
@@ -53,13 +53,17 @@
 
 .photo__like {
   display: inline-block;
-  padding-top: 10px;
+  padding-top: 6px;
   font-weight: bold;
   text-decoration: none;
   outline: none;
   color: @black;
   fill: fade(@black, 30%);
   cursor: pointer;
+
+  & svg {
+    margin-right: 10px;
+  }
 
   &:hover,
   &:focus {
@@ -129,11 +133,6 @@
     right: 30px;
     padding-top: 0;
     transform: translateY(-50%);
-
-    &::before {
-      bottom: 0;
-      left: 4px;
-    }
   }
 }
 
