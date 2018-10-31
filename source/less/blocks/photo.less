@@ -35,7 +35,7 @@
 }
 
 .photo__info {
-  padding-top: 6px;
+  padding-top: 5px;
   text-align: left;
 }
 
@@ -52,24 +52,40 @@
 }
 
 .photo__like {
-  position: relative;
   display: inline-block;
-  padding-top: 10px;
-  padding-left: 35px;
+  padding-top: 6px;
   font-weight: bold;
+  text-decoration: none;
+  outline: none;
+  color: @black;
+  fill: fade(@black, 30%);
+  cursor: pointer;
 
-  &::before {
-    position: absolute;
-    content: "";
-    bottom: 3px;
-    left: 0;
-    width: 22px;
-    height: 22px;
-    background-image: url("../img/icon-like.svg");
-    background-repeat: no-repeat;
-    background-size: contain;
-    opacity: 0.3;
+  & svg {
+    margin-right: 10px;
   }
+
+  &:hover,
+  &:focus {
+    fill: fade(@black, 60%);
+  }
+
+  &:active {
+    fill: fade(@black, 90%);
+  }
+
+  // &::before {
+  //   position: absolute;
+  //   content: "";
+  //   bottom: 3px;
+  //   left: 0;
+  //   width: 22px;
+  //   height: 22px;
+  //   background-image: url("../img/icon-like.svg");
+  //   background-repeat: no-repeat;
+  //   background-size: contain;
+  //   opacity: 0.3;
+  // }
 }
 
 @media (min-width: @tablet) {
@@ -117,11 +133,6 @@
     right: 30px;
     padding-top: 0;
     transform: translateY(-50%);
-
-    &::before {
-      bottom: 0;
-      left: 4px;
-    }
   }
 }
 
@@ -158,9 +169,16 @@
 
   .photo__like {
     right: 20px;
+    color: @white;
+    fill: @white;
 
-    &::before {
-      fill: @white;
+    &:hover,
+    &:focus {
+      fill: fade(@white, 60%);
+    }
+
+    &:active {
+      fill: fade(@white, 30%);
     }
   }
 }

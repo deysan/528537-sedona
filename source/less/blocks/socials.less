@@ -18,25 +18,29 @@
 }
 
 .socials__link {
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 47px;
   height: 48px;
   background-color: @color-base;
-  background-repeat: no-repeat;
-  background-position: center;
+  // background-repeat: no-repeat;
+  // background-position: center;
+  vertical-align: middle;
   outline: none;
+  fill: @white;
 
-  &--tw {
-    background-image: url("../img/icon-twitter.svg");
-  }
+  // &--tw {
+  //   background-image: url("../img/icon-twitter.svg");
+  // }
 
-  &--fb {
-    background-image: url("../img/icon-facebook.svg");
-  }
+  // &--fb {
+  //   background-image: url("../img/icon-facebook.svg");
+  // }
 
-  &--yt {
-    background-image: url("../img/icon-youtube.svg");
-  }
+  // &--yt {
+  //   background-image: url("../img/icon-youtube.svg");
+  // }
 
   &:hover,
   &:focus {

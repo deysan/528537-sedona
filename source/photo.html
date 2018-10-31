@@ -52,6 +52,10 @@
         <ul class="photo__list">
           <li class="photo__item">
             <picture>
+              <source type="image/webp" media="(min-width: 1200px)" srcset="img/webp/photo-sunset-desktop@1x.webp 1x, img/webp/photo-sunset-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/webp/photo-sunset-tablet@1x.webp 1x, img/webp/photo-sunset-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/webp/photo-sunset-mobile@1x.webp 1x, img/webp/photo-sunset-mobile@2x.webp 2x">
+
               <source media="(min-width: 1200px)" srcset="img/photo-sunset-desktop@1x.jpg 1x, img/photo-sunset-desktop@2x.jpg 2x">
               <source media="(min-width: 768px)" srcset="img/photo-sunset-tablet@1x.jpg 1x, img/photo-sunset-tablet@2x.jpg 2x">
               <img class="photo__image" src="img/photo-sunset-mobile@1x.jpg" srcset="img/photo-sunset-mobile@2x.jpg" alt="Неродные просторы" width="280" height="280">
@@ -59,11 +63,19 @@
             <div class="photo__info">
               <h3 class="photo__title">Неродные просторы</h3>
               <p class="photo__autor">Автор фото: Борис</p>
-              <span class="photo__like">1350</span>
+              <!-- <span class="photo__like">1350</span> -->
+              <a class="photo__like" href="#like">
+                <svg width="22" height="20"><use xlink:href="img/sprite.svg#icon-like"></use></svg>
+                <span>1350</span>
+              </a>
             </div>
           </li>
           <li class="photo__item">
             <picture>
+              <source type="image/webp" media="(min-width: 1200px)" srcset="img/webp/photo-cactus-desktop@1x.webp 1x, img/webp/photo-cactus-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/webp/photo-cactus-tablet@1x.webp 1x, img/webp/photo-cactus-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/webp/photo-cactus-mobile@1x.webp 1x, img/webp/photo-cactus-mobile@2x.webp 2x">
+
               <source media="(min-width: 1200px)" srcset="img/photo-cactus-desktop@1x.jpg 1x, img/photo-cactus-desktop@2x.jpg 2x">
               <source media="(min-width: 768px)" srcset="img/photo-cactus-tablet@1x.jpg 1x, img/photo-cactus-tablet@2x.jpg 2x">
               <img class="photo__image" src="img/photo-cactus-mobile@1x.jpg" srcset="img/photo-cactus-mobile@2x.jpg" alt="Местная растительность" width="280" height="280">
@@ -71,11 +83,19 @@
             <div class="photo__info">
               <h3 class="photo__title">Местная растительность</h3>
               <p class="photo__autor">Автор фото: Сергей</p>
-              <span class="photo__like">143</span>
+              <!-- <span class="photo__like">143</span> -->
+              <a class="photo__like" href="#like">
+                <svg width="22" height="20"><use xlink:href="img/sprite.svg#icon-like"></use></svg>
+                <span>143</span>
+              </a>
             </div>
           </li>
           <li class="photo__item">
             <picture>
+              <source type="image/webp" media="(min-width: 1200px)" srcset="img/webp/photo-roads-desktop@1x.webp 1x, img/webp/photo-roads-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/webp/photo-roads-tablet@1x.webp 1x, img/webp/photo-roads-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/webp/photo-roads-mobile@1x.webp 1x, img/webp/photo-roads-mobile@2x.webp 2x">
+
               <source media="(min-width: 1200px)" srcset="img/photo-roads-desktop@1x.jpg 1x, img/photo-roads-desktop@2x.jpg 2x">
               <source media="(min-width: 768px)" srcset="img/photo-roads-tablet@1x.jpg 1x, img/photo-roads-tablet@2x.jpg 2x">
               <img class="photo__image" src="img/photo-roads-mobile@1x.jpg" srcset="img/photo-roads-mobile@2x.jpg" alt="Дорога на Север" width="280" height="280">
@@ -83,11 +103,19 @@
             <div class="photo__info">
               <h3 class="photo__title">Дорога на Север</h3>
               <p class="photo__autor">Автор фото: Петр</p>
-              <span class="photo__like">96</span>
+              <!-- <span class="photo__like">96</span> -->
+              <a class="photo__like" href="#like">
+                <svg width="22" height="20"><use xlink:href="img/sprite.svg#icon-like"></use></svg>
+                <span>96</span>
+              </a>
             </div>
           </li>
           <li class="photo__item">
             <picture>
+              <source type="image/webp" media="(min-width: 1200px)" srcset="img/webp/photo-bridge-desktop@1x.webp 1x, img/webp/photo-bridge-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/webp/photo-bridge-tablet@1x.webp 1x, img/webp/photo-bridge-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/webp/photo-bridge-mobile@1x.webp 1x, img/webp/photo-bridge-mobile@2x.webp 2x">
+
               <source media="(min-width: 1200px)" srcset="img/photo-bridge-desktop@1x.jpg 1x, img/photo-bridge-desktop@2x.jpg 2x">
               <source media="(min-width: 768px)" srcset="img/photo-bridge-tablet@1x.jpg 1x, img/photo-bridge-tablet@2x.jpg 2x">
               <img class="photo__image" src="img/photo-bridge-mobile@1x.jpg" srcset="img/photo-bridge-mobile@2x.jpg" alt="Мост Дьявола" width="280" height="280">
@@ -95,7 +123,10 @@
             <div class="photo__info">
               <h3 class="photo__title">Мост Дьявола</h3>
               <p class="photo__autor">Автор фото: Антон</p>
-              <span class="photo__like">254</span>
+              <a class="photo__like" href="#like">
+                <svg width="22" height="20"><use xlink:href="img/sprite.svg#icon-like"></use></svg>
+                <span>254</span>
+              </a>
             </div>
           </li>
         </ul>
@@ -110,6 +141,10 @@
         </div>
         <div class="video__player">
           <picture>
+            <source type="image/webp" media="(min-width: 1200px)" srcset="img/webp/video-desktop@1x.webp 1x, img/webp/video-desktop@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/webp/video-tablet@1x.webp 1x, img/webp/video-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/webp/video-mobile@1x.webp 1x, img/webp/video-mobile@2x.webp 2x">
+
             <source media="(min-width: 1200px)" srcset="img/video-desktop@1x.jpg 1x, img/video-desktop@2x.jpg 2x">
             <source media="(min-width: 768px)" srcset="img/video-tablet@1x.jpg 1x, img/video-tablet@2x.jpg 2x">
             <img class="video__preview" src="img/video-mobile@1x.jpg" srcset="img/video-mobile@2x.jpg" alt="Видеопрезентацию Седоны" width="320" height="200">
@@ -120,9 +155,9 @@
               <div class="video__toggle"></div>
             </div>
             <div class="video__buttons">
-              <img class="video__button video__button--replay" src="img/icon-video-replay.svg">
-              <img class="video__button video__button--subtitles" src="img/icon-video-subtitles.svg">
-              <img class="video__button video__button--fullscreen" src="img/icon-video-fullscreen.svg">
+              <svg class="video__button video__button--replay" width="16" height="20"><use xlink:href="img/sprite.svg#icon-video-replay"></use></svg>
+              <svg class="video__button video__button--subtitles" width="32" height="20"><use xlink:href="img/sprite.svg#icon-video-subtitles"></use></svg>
+              <svg class="video__button video__button--fullscreen" width="20" height="20"><use xlink:href="img/sprite.svg#icon-video-fullscreen"></use></svg>
             </div>
           </div>
         </div>
@@ -137,22 +172,28 @@
           <li class="socials__item">
             <a class="socials__link socials__link--tw" href="#tw">
               <span class="visually-hidden">Твиттер</span>
+              <svg class="socials__icon" width="18" height="15"><use xlink:href="img/sprite.svg#icon-tw"></use></svg>
             </a>
           </li>
           <li class="socials__item">
             <a class="socials__link socials__link--fb" href="#fb">
               <span class="visually-hidden">Фейсбук</span>
+              <svg class="socials__icon" width="9" height="18"><use xlink:href="img/sprite.svg#icon-fb"></use></svg>
             </a>
           </li>
           <li class="socials__item">
             <a class="socials__link socials__link--yt" href="#yt">
               <span class="visually-hidden">YouTube</span>
+              <svg class="socials__icon" width="20" height="14"><use xlink:href="img/sprite.svg#icon-yt"></use></svg>
             </a>
           </li>
         </ul>
       </div>
       <p class="page-footer__creator creator">Разработано
-        <a class="creator__link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">htmlacademy.ru</a>
+        <a class="creator__link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
+          <span class="visually-hidden">htmlacademy.ru</span>
+          <svg width="40" height="40"><use xlink:href="img/sprite.svg#logo-htmlacademy"></use></svg>
+        </a>
       </p>
     </footer>
 

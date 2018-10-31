@@ -30,7 +30,6 @@
   position: relative;
   display: block;
   width: 100%;
-  // max-width: 650px;
   height: 200px;
   margin: 0 auto;
   background-color: @color-bg;
@@ -87,6 +86,7 @@
 }
 
 .video__button {
+  fill: #5c6870;
   cursor: pointer;
 
   &--replay {
@@ -105,16 +105,29 @@
     height: 20px;
     margin-left: 30px;
   }
+
+  &:hover,
+  &:focus {
+    fill: #333333;
+  }
+
+  &:active {
+    fill: fade(#5c6870, 30%);
+  }
 }
 
 @media (min-width: @tablet) {
   .video {
     padding-top: 14px;
+    padding-left: 10px;
+    padding-right: 10px;
   }
 
   .video__player {
     .container();
     padding-top: 37px;
+    padding-left: 60px;
+    padding-right: 60px;
     margin-bottom: 41px;
   }
 
@@ -129,16 +142,16 @@
     display: flex;
     align-items: center;
     bottom: 0;
-    left: 50px;
-    right: 50px;
+    left: 60px;
+    right: 60px;
     width: auto;
+    height: 90px;
     padding: 0;
     background-color: @black;
     opacity: 0.6;
   }
 
   .video__range {
-    // top: 50%;
     width: 100%;
     height: auto;
     background-color: transparent;
@@ -147,7 +160,6 @@
 
   .video__scale {
     left: 95px;
-    // right: 95px;
   }
 
   .video__toggle {
@@ -161,20 +173,21 @@
   }
 
   .video__button {
+    fill: @white;
     cursor: pointer;
 
     &--replay {
       position: absolute;
       left: 35px;
-      fill: @white;
     }
 
-    &--subtitles {
-      fill: @white;
+    &:hover,
+    &:focus {
+      fill: fade(@white, 60%);
     }
 
-    &--fullscreen {
-      fill: @white;
+    &:active {
+      fill: fade(@white, 30%);
     }
   }
 }

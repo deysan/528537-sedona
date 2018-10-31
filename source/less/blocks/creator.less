@@ -12,7 +12,8 @@
   text-decoration: none;
   vertical-align: middle;
   outline: none;
-  background: url("../img/htmlacademy.svg") no-repeat center;
+  fill: @black;
+  // background: url("../img/htmlacademy.svg") no-repeat center;
 
   &:hover,
   &:focus {
@@ -21,5 +22,19 @@
 
   &:active {
     fill: fade(@black, 30%);
+  }
+}
+
+@media (min-width: @tablet) {
+  .creator__link {
+    width: 39px;
+    height: 39px;
+  }
+}
+
+@media (min-width: @desktop) {
+  .creator__link {
+    width: 34px;
+    height: 34px;
   }
 }

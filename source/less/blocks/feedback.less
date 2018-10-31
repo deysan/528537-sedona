@@ -70,30 +70,30 @@
     flex-wrap: wrap;
   }
 
-  &[for="tel"]::after,
-  &[for="mail"]::after {
-    position: absolute;
-    content: "";
-    top: 31px;
-    right: 0;
-    width: 18px;
-    height: 18px;
-    padding: 20px;
-    // padding-bottom: 23px;
-    background-color: darken(@color-bg, 10%);
-    background-repeat: no-repeat;
-    background-position: center;
-    border-top-right-radius: 4px;
-    border-bottom-right-radius: 4px;
-  }
+  // &[for="tel"]::after,
+  // &[for="mail"]::after {
+  //   position: absolute;
+  //   content: "";
+  //   top: 31px;
+  //   right: 0;
+  //   width: 18px;
+  //   height: 18px;
+  //   padding: 20px;
+  //   // padding-bottom: 23px;
+  //   background-color: darken(@color-bg, 10%);
+  //   background-repeat: no-repeat;
+  //   background-position: center;
+  //   border-top-right-radius: 4px;
+  //   border-bottom-right-radius: 4px;
+  // }
 
-  &[for="tel"]::after {
-    background-image: url("../img/icon-phone.svg");
-  }
+  // &[for="tel"]::after {
+  //   background-image: url("../img/icon-phone.svg");
+  // }
 
-  &[for="mail"]::after {
-    background-image: url("../img/icon-mail.svg");
-  }
+  // &[for="mail"]::after {
+  //   background-image: url("../img/icon-mail.svg");
+  // }
 
   &:last-child {
     padding-bottom: 0;
@@ -113,6 +113,7 @@
   border-radius: 4px;
   border: none;
   outline: none;
+  cursor: pointer;
 
   &[id="tel"],
   &[id="mail"] {
@@ -136,6 +137,23 @@
   &:focus {
     background-color: @white;
     box-shadow: 0 0 0 4px darken(@color-bg, 10%) inset;
+  }
+}
+
+.feedback__input-icon {
+  position: absolute;
+  bottom: 6px;
+  right: 0;
+  background-color: darken(@color-bg, 10%);
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+
+  &--tel {
+    padding: 20px;
+  }
+
+  &--mail {
+    padding: 21px;
   }
 }
 
@@ -443,6 +461,20 @@
     }
   }
 
+  .feedback__input-icon {
+    bottom: 14px;
+
+    &--tel {
+      padding: 19px;
+      padding-top: 20px;
+    }
+
+    &--mail {
+      padding: 20px;
+      padding-top: 21px;
+    }
+  }
+
   .feedback__label-radio {
     margin-top: 22px;
     margin-bottom: 8px;
@@ -551,9 +583,9 @@
         flex-grow: 1;
       }
 
-      &:last-child {
-        // padding: 0;
-      }
+      // &:last-child {
+      //   padding: 0;
+      // }
     }
 
     &[for="tel"]::after,
