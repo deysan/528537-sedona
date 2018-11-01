@@ -82,7 +82,7 @@ gulp.task("sprite", function() {
       inlineSvg: true
     }))
     .pipe(rename("sprite.svg"))
-    .pipe(gulp.dest("build/img/sprite"));
+    .pipe(gulp.dest("build/img"));
 });
 
 gulp.task("html", function () {
