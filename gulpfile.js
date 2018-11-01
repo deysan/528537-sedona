@@ -47,7 +47,6 @@ gulp.task("css", function () {
 
 gulp.task("script", function() {
   return gulp.src("source/js/**/*.js")
-  .pipe(gulp.dest("build/js"))
     .pipe(uglify())
     .pipe(gulp.dest("build/js"))
     .pipe(rename({suffix: '.min'}))
@@ -82,7 +81,8 @@ gulp.task("sprite", function() {
       inlineSvg: true
     }))
     .pipe(rename("sprite.svg"))
-    .pipe(gulp.dest("build/img"));
+    .pipe(gulp.dest("build/img"))
+    .pipe(gulp.dest("source/img"));
 });
 
 gulp.task("html", function () {
