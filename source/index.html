@@ -4,7 +4,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>HTML Academy: Седона</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
+    <script>document.createElement("pictue");</script>
+    <script src="js/picturefill.min.js" async></script>
+    <script src="js/main.min.js" defer></script>
   </head>
   <body>
 
@@ -117,8 +120,7 @@
 
       <section class="section contacts">
         <h2 class="section__title visually-hidden">Контакты городка Седоны</h2>
-        <!-- <div id="map" class="contacts__map" aria-label="Карта городка Седоны"> -->
-        <iframe class="contacts__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d104770.38018730558!2d-111.86517855273749!3d34.85435832354931!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sua!4v1540939781084" width="100%" height="auto" frameborder="0" style="border:0" allowfullscreen></iframe>
+        <div id="map" class="contacts__map" aria-label="Карта городка Седоны">
         </div>
       </section>
 
@@ -156,50 +158,10 @@
       </p>
     </footer>
 
-    <script>
-      var navMain = document.querySelector('.main-nav');
-      var navToggle = document.querySelector('.main-nav__toggle');
-
-      navMain.classList.remove('main-nav--nojs');
-      navToggle.classList.remove("main-nav__toggle--nojs");
-
-      navToggle.addEventListener("click", function() {
-        if (navMain.classList.contains("main-nav--closed")) {
-          navMain.classList.remove("main-nav--closed");
-          navMain.classList.add("main-nav--opened");
-          navToggle.classList.remove("main-nav__toggle--closed");
-          navToggle.classList.add("main-nav__toggle--opened");
-        } else {
-          navMain.classList.add("main-nav--closed");
-          navMain.classList.remove("main-nav--opened");
-          navToggle.classList.add("main-nav__toggle--closed");
-          navToggle.classList.remove("main-nav__toggle--opened");
-        }
-      });
-    </script>
-
-    <!-- <script>
-      function initMap() {
-      var sedona = new google.maps.Map(document.getElementById("map"), {
-        zoom: 17,
-        center: {lat: 34.8543583, lng: 111.8651786},
-      });
-      var marker = new google.maps.Marker({
-        position: {lat: 34.8543583, lng: 111.8651786},
-        map: sedona,
-        icon: "../img/icon-map-marker.svg"
-      });
-      var InfoWindow = new google.maps.InfoWindow({
-        content: "<b>Sedona</b>"
-      })
-      InfoWindow.open(sedona, marker);
-      marker.addListener("click", function(){
-        InfoWindow.open(sedona, marker);
-      })
-    }
-    </script> -->
-
-    <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAFzI1v-jjko5TD3j4CsKSy8k_bQleovs0&callback=initMap" async defer></script> -->
+    <script src="js/svg4everybody.min.js"></script>
+    <script>svg4everybody();</script>
+    <script src="js/map.min.js" async defer></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDzI3x1OP751YNBB0OA1gCkRjl-dGeHl7c&callback=initMap" async defer></script>
 
   </body>
 </html>
