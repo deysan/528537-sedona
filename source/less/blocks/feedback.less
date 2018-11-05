@@ -19,10 +19,6 @@
   &--fullname {
     padding-bottom: 24px;
   }
-
-  &--contacts {
-    // padding-bottom: 16px;
-  }
 }
 
 .feedback__legend {
@@ -61,7 +57,6 @@
   cursor: pointer;
 
   &:last-child {
-    // padding-bottom: 0;
     margin-bottom: 0;
   }
 
@@ -69,8 +64,6 @@
   &[for="mail"] {
     position: relative;
     flex-wrap: wrap;
-    // margin-top: 4px;
-    // margin-bottom: 4px;
     margin-bottom: 45px;
     padding-left: 21px;
 
@@ -78,40 +71,12 @@
       margin-bottom: 40px;
     }
   }
-
-  // &[for="tel"]::after,
-  // &[for="mail"]::after {
-  //   position: absolute;
-  //   content: "";
-  //   top: 31px;
-  //   right: 0;
-  //   width: 18px;
-  //   height: 18px;
-  //   padding: 20px;
-  //   // padding-bottom: 23px;
-  //   background-color: darken(@color-bg, 10%);
-  //   background-repeat: no-repeat;
-  //   background-position: center;
-  //   border-top-right-radius: 4px;
-  //   border-bottom-right-radius: 4px;
-  // }
-
-  // &[for="tel"]::after {
-  //   background-image: url("../img/icon-phone.svg");
-  // }
-
-  // &[for="mail"]::after {
-  //   background-image: url("../img/icon-mail.svg");
-  // }
 }
 
 .feedback__input {
   width: 100px;
   height: 100%;
-  // height: 60px;
   flex-grow: 1;
-  // margin-top: 2px;
-  // margin-bottom: 6px;
   margin-left: 15px;
   padding: 0 22px;
   .font-set(18px, 18px, bold);
@@ -126,9 +91,6 @@
     width: 100%;
     margin-top: 7px;
     margin-left: -21px;
-    // padding: 0;
-    // padding-left: 21px;
-
   }
 
   &::placeholder {
@@ -157,13 +119,10 @@
 
   &--tel {
     padding: 20px;
-    // padding-top: 20px;
   }
 
   &--mail {
     padding: 21px;
-    // padding: 23px;
-    // padding-top: 24px;
   }
 }
 
@@ -350,18 +309,14 @@
     }
 
     &--contacts {
-      // padding-bottom: 20px;
       order: 3;
     }
 
     &--sight {
-      // padding-top: 10px;
-      // padding-bottom: 24px;
       order: 4;
     }
 
     &--comment {
-      // padding-left: 52px;
       order: 5;
     }
 
@@ -443,52 +398,18 @@
   }
 
   .feedback__label {
-    // margin-top: 9px;
-
     &[for="tel"],
     &[for="mail"] {
-      // margin-top: 7px;
       margin-bottom: 56px;
-      // margin-bottom: 50px;
-      // padding-left: 22px;
 
       &:last-child {
         margin-bottom: 45px;
       }
     }
-
-    &[for="tel"]::after,
-    &[for="mail"]::after {
-      // top: 34px;
-      // padding: 17px;
-      // padding-bottom: 20px;
-    }
-  }
-
-  .feedback__input {
-    &[id="tel"],
-    &[id="mail"] {
-      // margin-top: 10px;
-      // margin-bottom: 14px;
-      // margin-left: -20px;
-      // padding-top: 16px;
-      // padding-bottom: 18px;
-      // padding-left: 21px;
-    }
   }
 
   .feedback__input-icon {
     bottom: 14px;
-
-    &--tel {
-      // padding: 19px;
-      // padding-top: 20px;
-    }
-
-    &--mail {
-      // padding: 20px;
-      // padding-top: 21px;
-    }
   }
 
   .feedback__label-radio {
@@ -560,10 +481,6 @@
     &--contacts {
       margin-bottom: 75px;
     }
-
-    &--sight {
-      // margin-bottom: 20px;
-    }
   }
 
   .feedback__group {
@@ -581,7 +498,6 @@
       width: 100;
       margin-left: 0;
       margin-right: 0;
-      // margin-top: 32px;
     }
 
     &--contacts {
@@ -596,8 +512,6 @@
       width: 42%;
       padding: 0;
       margin-bottom: 0;
-      // padding-right: 60px;
-      // flex-grow: 1;
       flex-wrap: nowrap;
 
       &:nth-child(2n) {
@@ -608,17 +522,6 @@
       &:last-child {
         margin-bottom: 0;
       }
-
-      // &:last-child {
-      //   padding: 0;
-      // }
-    }
-
-    &[for="tel"]::after,
-    &[for="mail"]::after {
-      // top: 10px;
-      // padding: 17px;
-      // padding-bottom: 20px;
     }
 
     &--hidden {

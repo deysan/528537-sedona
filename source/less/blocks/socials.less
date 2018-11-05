@@ -24,23 +24,9 @@
   width: 47px;
   height: 48px;
   background-color: @color-base;
-  // background-repeat: no-repeat;
-  // background-position: center;
   vertical-align: middle;
   outline: none;
   fill: @white;
-
-  // &--tw {
-  //   background-image: url("../img/icon-twitter.svg");
-  // }
-
-  // &--fb {
-  //   background-image: url("../img/icon-facebook.svg");
-  // }
-
-  // &--yt {
-  //   background-image: url("../img/icon-youtube.svg");
-  // }
 
   &:hover,
   &:focus {
@@ -58,10 +44,15 @@
   .socials__item {
     margin: 0;
   }
+
+  .socials {
+    margin-right: 6px;
+  }
 }
 
 @media (min-width: @desktop) {
   .socials {
-    margin: 10px 0;
+    margin: 11px 0;
+    margin-right: 10px;
   }
 }
