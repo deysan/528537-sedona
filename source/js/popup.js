@@ -5,14 +5,14 @@ var overlay = document.querySelector(".popup-overlay");
 var firstName = feedback.querySelector("[name=first-name]");
 var secondName = feedback.querySelector("[name=second-name]");
 var tel = feedback.querySelector("[name=tel]");
-var mail = feedback.querySelector("[name=mail]");
+var email = feedback.querySelector("[name=email]");
 var feedbackBTN = feedback.querySelector(".feedback__btn");
 var closeFailure = popupFailure.querySelector(".popup__btn-ok");
 var closeSuccess = popupSuccess.querySelector(".popup__but-close");
 
 feedbackBTN.addEventListener("click", function(event) {
   event.preventDefault();
-  if (!firstName.value || !secondName.value || !tel.value || !mail.value) {
+  if (!firstName.value || !secondName.value || !tel.value || !email.value) {
     popupFailure.classList.add("popup-show");
     closeFailure.focus();
   } else {
