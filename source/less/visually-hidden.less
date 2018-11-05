@@ -12,3 +12,13 @@ input[type="radio"].visually-hidden {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+
+.visually-br {
+  display: none;
+}
+
+@media (min-width: @desktop) {
+  .visually-br {
+    display: block;
+  }
+}
