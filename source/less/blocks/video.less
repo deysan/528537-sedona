@@ -162,10 +162,11 @@
 
   .video__scale {
     left: 95px;
+    margin-right: 40px;
   }
 
   .video__toggle {
-    left: 43%;
+    left: 38%;
   }
 
   .video__buttons {
@@ -175,12 +176,22 @@
   }
 
   .video__button {
+    position: absolute;
+    top: 50%;
     fill: @white;
+    transform: translateY(-50%);
     cursor: pointer;
 
     &--replay {
-      position: absolute;
       left: 35px;
+    }
+
+    &--subtitles {
+      right: 93px;
+    }
+
+    &--fullscreen {
+      right: 40px;
     }
 
     &:hover,
@@ -215,10 +226,16 @@
   }
 
   .video__toggle {
-    left: 33%;
+    left: 30%;
   }
 
   .video__buttons {
     padding-right: 44px;
+  }
+
+  .video__button {
+    &--fullscreen {
+      right: 42px;
+    }
   }
 }

@@ -123,6 +123,7 @@
   margin-top: 15px;
   margin-bottom: 11px;
   padding: 0;
+  text-align: center;
   .font-set(18px, 26px, bold);
 }
 
@@ -182,6 +183,10 @@
         flex-direction: column;
         flex-basis: 162px;
       }
+
+      .advantages__title {
+        max-width: none;
+      }
     }
   }
 
@@ -214,6 +219,7 @@
     }
 
     &--more {
+      display: block;
       padding-top: 145px;
       padding-bottom: 47px;
       text-align: center;
@@ -294,7 +300,8 @@
     &--more {
       .advantages__item {
         flex-basis: 300px;
-        padding-left: 11px;
+        padding-left: 10px;
+        padding-right: 10px;
       }
     }
   }
@@ -344,7 +351,7 @@
     }
 
     &--gift::before {
-      left: 126px;
+      left: 128px;
     }
   }
 
