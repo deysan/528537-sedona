@@ -10,7 +10,7 @@ var feedbackBTN = feedback.querySelector(".feedback__btn");
 var closeFailure = popupFailure.querySelector(".popup__btn-ok");
 var closeSuccess = popupSuccess.querySelector(".popup__btn-close");
 
-feedbackBTN.addEventListener("click", function(event) {
+feedbackBTN.addEventListener("click", function (event) {
   event.preventDefault();
   if (!firstName.value || !secondName.value || !tel.value || !email.value) {
     overlay.classList.add("popup--show");
@@ -23,26 +23,26 @@ feedbackBTN.addEventListener("click", function(event) {
   }
 });
 
-closeFailure.addEventListener("click", function(event) {
+closeFailure.addEventListener("click", function (event) {
   event.preventDefault();
   popupFailure.classList.remove("popup--show");
   overlay.classList.remove("popup--show");
 });
 
-closeSuccess.addEventListener("click", function(event) {
+closeSuccess.addEventListener("click", function (event) {
   event.preventDefault();
   popupSuccess.classList.remove("popup--show");
   overlay.classList.remove("popup--show");
 });
 
-overlay.addEventListener("click", function(event) {
+overlay.addEventListener("click", function (event) {
   event.preventDefault();
   popupFailure.classList.remove("popup--show");
   popupSuccess.classList.remove("popup--show");
   overlay.classList.remove("popup--show");
 });
 
-window.addEventListener("keydown", function(event) {
+window.addEventListener("keydown", function (event) {
   if (event.keyCode === 27) {
     if (popupFailure.classList.contains("popup--show") && overlay.classList.contains("popup--show")) {
       popupFailure.classList.remove("popup--show");

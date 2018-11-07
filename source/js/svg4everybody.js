@@ -1,8 +1,8 @@
-! function(e, t) {
-  "function" == typeof define && define.amd ? define([], function() {
+! function (e, t) {
+  "function" == typeof define && define.amd ? define([], function () {
     return e.svg4everybody = t()
   }) : "object" == typeof exports ? module.exports = t() : e.svg4everybody = t()
-}(this, function() {
+}(this, function () {
   function g(e, t) {
     if (t) {
       var n = !e.getAttribute("viewBox") && t.getAttribute("viewBox"),
@@ -14,16 +14,16 @@
   }
 
   function l(e) {
-    e.onreadystatechange = function() {
+    e.onreadystatechange = function () {
       if (4 === e.readyState) {
         var t = document.createElement("x");
-        t.innerHTML = e.responseText, e.s.splice(0).map(function(e) {
+        t.innerHTML = e.responseText, e.s.splice(0).map(function (e) {
           g(e[0], t.querySelector("#" + e[1].replace(/(\W)/g, "\\$1")))
         })
       }
     }, e.onreadystatechange()
   }
-  return function(e) {
+  return function (e) {
     e = e || {};
     var d = document.getElementsByTagName("use"),
       u = "shim" in e ? e.shim : /\bEdge\/12\b|\bTrident\/[567]\b|\bVersion\/7.0 Safari\b/.test(navigator.userAgent) || (navigator.userAgent.match(/AppleWebKit\/(\d+)/) || [])[1] < 537,

@@ -94,7 +94,7 @@ function initMap() {
     content: "<b>Седона – небольшой городок в Аризоне, заслуживающий большего!</b>"
   })
   InfoWindow.open(sedona, marker);
-  marker.addListener("click", function() {
+  marker.addListener("click", function () {
     InfoWindow.open(sedona, marker);
   })
 }
