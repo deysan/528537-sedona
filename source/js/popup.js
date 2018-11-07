@@ -23,13 +23,13 @@ feedbackBTN.addEventListener("click", function(event) {
   }
 });
 
-closeFailure.addEventListener("click", function (event) {
+closeFailure.addEventListener("click", function(event) {
   event.preventDefault();
   popupFailure.classList.remove("popup--show");
   overlay.classList.remove("popup--show");
 });
 
-closeSuccess.addEventListener("click", function (event) {
+closeSuccess.addEventListener("click", function(event) {
   event.preventDefault();
   popupSuccess.classList.remove("popup--show");
   overlay.classList.remove("popup--show");
@@ -42,7 +42,7 @@ overlay.addEventListener("click", function(event) {
   overlay.classList.remove("popup--show");
 });
 
-window.addEventListener("keydown", function (event) {
+window.addEventListener("keydown", function(event) {
   if (event.keyCode === 27) {
     if (popupFailure.classList.contains("popup--show") && overlay.classList.contains("popup--show")) {
       popupFailure.classList.remove("popup--show");
