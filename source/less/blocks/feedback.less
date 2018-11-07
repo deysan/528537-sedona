@@ -126,11 +126,6 @@
   }
 }
 
-.feedback__input-radio,
-.feedback__input-check {
-  display: none;
-}
-
 .feedback__label-check,
 .feedback__label-radio {
   position: relative;
@@ -138,6 +133,7 @@
   padding-left: 78px;
   .font-set(18px, 20px, bold);
   text-transform: none;
+  outline: none;
   cursor: pointer;
 
   &::before {
@@ -153,12 +149,12 @@
     cursor: pointer;
   }
 
-  &:hover::before,
-  &:focus::before {
+  &:hover::before {
     background-color: darken(@color-bg, 10%);
   }
 
-  &:active::before {
+  &:active::before,
+  &:focus::before {
     background-color: darken(@color-bg, 20%);
   }
 }
