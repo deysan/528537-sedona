@@ -154,8 +154,7 @@
     background-color: darken(@color-bg, 10%);
   }
 
-  &:active::before,
-  &:focus::before {
+  &:active::before {
     background-color: darken(@color-bg, 20%);
   }
 }
@@ -195,6 +194,10 @@
     transform: translateY(-50%);
   }
 
+  &:focus + .feedback__label-radio::before {
+    background-color: darken(@color-bg, 10%);
+  }
+
   &:checked:active + ::after,
   &:disabled + ::after {
     background-color: fade(@dark, 50%);
@@ -220,6 +223,10 @@
     border-top: none;
     // border-radius: 2px;
     transform: rotate(45deg);
+  }
+
+  &:focus + .feedback__label-check::before {
+    background-color: darken(@color-bg, 10%);
   }
 
   &:checked:active + ::after {
